@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtUVxMPXEULXVYWSlVVXV8PAw==","queueTime":0,"applicationTime":27,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<!-- Responsive/Mobile Content Controls -->
+<meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0" name="viewport">
+<meta content="Find out how to make your recruiting easier, more effective and more cost effective with recruitment tools from CareerBuilder." name="description">
+<meta content="" name="keywords">
+<!-- Social media meta tags -->
+<meta content="https://hiring.careerbuilder.com/company/terms-and-conditions" property="og:url">
+<meta content="website" property="og:type">
+<meta content="Terms And Conditions | CareerBuilder for Employers" property="og:title">
+<meta content="Find out how to make your recruiting easier, more effective and more cost effective with recruitment tools from CareerBuilder." property="og:description">
+<meta content="CareerBuilder for Employers" property="og:site_name">
+<meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-fb-9169b970258d64c0200bc26474f89ba088ffd0a660f44778fd42f7149e2c4dba.png" property="og:image">
+<meta content="600" property="og:image:width">
+<meta content="315" property="og:image:height">
+<meta content="summary" name="twitter:card">
+<meta content="@cbforemployers" name="twitter:site">
+<meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-tw-9f5fe0a099b753ebb22a5954777547891a994bd085763701c05ef22fd02de5e0.png" name="twitter:image">
+<meta content="CareerBuilder logomark" name="twitter:image:alt">
+<meta content="4VVGz5NZohp3_6vBXlv5_Z2lQTMz6XdevQ_NVEV5Ke8" name="google-site-verification">
+<title>Terms And Conditions | CareerBuilder for Employers</title>
+<script type="application/ld+json">
+  {
+    "@type": "Company",
+    "name": "CareerBuilder Hiring Solutions",
+    "alternateName": "CareerBuilder for Employers",
+    "url": "https://www.hiring.careerbuilder.com",
+    "logo": "https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-original-2696.png?1476226773",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "1.877.345.5256",
+      "contactType": "sales",
+      "areaServed": "US"
+    },{
+      "@type": "ContactPoint",
+      "telephone": "1.800.891.8880",
+      "contactType": "customer service",
+      "areaServed": "US"
+    }],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hiring.careerbuilder.com/search?q=Terms And Conditions",
+      "query-input": "required name=terms_and_conditions"
+    }
+    "sameAs" : [
+      "https://www.facebook.com/cbforemployers",
+      "https://www.twitter.com/cbforemployers",
+      "https://www.linkedin.com/company/careerbuilder-for-employers"
+    ]
+  }
+</script>
+
+<link href="https://hiring.careerbuilder.com/company/terms-and-conditions" rel="canonical">
+<link rel="shortcut icon" type="image/x-icon" href="https://d30c0uivkwifa5.cloudfront.net/assets/favicon-11a54e483811b662a28fdd298546c2c1b9c4048663fe08565d795c2a44d51a2d.ico">
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-9731fd0bc0ffd3ce165b066f9fe65e7f58f804b5fa582e8537bc2794b1fb932f.css">
+<!--[if IE 9]>
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie9-9512071f47a86075df1220015ac2094ecf1dd6ad880eab18305a50511dcd41b7.css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-ded79f97f31bd08e731a94dce56297d4398b86e3c6690165027fba93d013835b.css" />
+<![endif]-->
+</head>
+<body class="employer-scope  marketing reading terms-and-conditions">
+<div class="modal__background hidden" id="modal-background"></div>
+<div class="modal__positioning hidden">
+<div class="modal--nav-dropdown__highlight text--subnav">
+<span>
+Post a Job
+<i class="fa fa-caret-down"></i>
+</span>
+<span>
+Search Resumes
+<i class="fa fa-caret-down"></i>
+</span>
+</div>
+</div>
+<header class="top-bar" data-turbolinks-permanent="" id="top-bar">
+<div class="top-bar__wrapper">
+<!-- / mobile menu open button -->
+<div class="top-bar__mobile-icon top-bar__mobile-icon--menu" id="mobile-menu-btn">
+<i class="fa fa-bars"></i>
+</div>
+<div class="top-bar__logo">
+<a href="/"></a>
+</div>
+<div class="top-bar__mobile-icon top-bar__mobile-icon--shop">
+<a href="https://employer.careerbuilder.com/ecommerce/global/shoppingcart.aspx">
+<i class="fa fa-shopping-cart fa-lg"></i>
+</a>
+</div>
+</div>
+<nav class="top-bar__menu top-bar__menu--hidden" id="collapsable-menu">
+<div class="top-bar--mobile-heading">
+<div class="top-bar--mobile-greeting" id="top-bar--mobile-greeting">
+<p class="text--headline-1">Hello.</p>
+<p class="text--headline-2">Sign in to find your next hire.</p>
+</div>
+<div class="top-bar--mobile-buttons">
+<a class="login-state top-bar__button--signin button button--large top-bar__link-reset" href="http://employer.careerbuilder.com/jobposter/mycb.aspx"><span class="login-state--text">
+Sign In
+</span>
+</a><div id="login__wrapper">
+<span class="top-bar--mobile-buttons__text">or</span>
+<a class="top-bar__button--signup button button--large top-bar__link-reset" href="http://employer.careerbuilder.com/share/register.aspx?usertype=UTEMPR&amp;sc_cmp1=JP_LoginASPX_RegNow&amp;_ga=1.129884556.164608459.1446484984">Sign Up
+</a>
+</div>
+</div>
+<div class="text--subnav">
+<ul>
+<li>
+<a href="/">
+Home
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="top-bar--primary text--subnav">
+<ul>
+<li class="flyout">
+<a href="#">
+Post a Job
+<i class="fa fa-caret-down"></i>
+</a>
+<ul>
+<li>
+<a class="top-bar__link" href="/recruitment-advertising/post-job-right-now">Buy Job Postings</a>
+</li>
+<li>
+<a class="top-bar__link" href="/recruitment-advertising/job-posting">About Job Postings</a>
+</li>
+</ul>
+</li>
+<li class="flyout">
+<a href="#">
+Search Resumes
+<i class="fa fa-caret-down"></i>
+</a>
+<ul>
+<li>
+<a class="top-bar__link" href="/talentstream/sourcing-technology/small-business-resume-database">Buy Resume Database Access</a>
+</li>
+<li>
+<a class="top-bar__link" href="/talentstream/sourcing-technology/search">About Resume Database</a>
+</li>
+</ul>
+</li>
+<li class="flyout top-bar--products">
+<a href="#">
+Products and Resources
+<i class="fa fa-caret-down"></i>
+</a>
+<ul>
+<li>
+<a href="/recruitment-advertising/post-job-right-now"><span class="top-bar__link">
+Post a Job
+</span>
+</a>
+</li>
+<li>
+<a href="/talentstream/sourcing-technology/small-business-resume-database"><span class="top-bar__link">
+Search Resumes
+</span>
+</a>
+</li>
+<li>
+<a href="/all-products"><span class="top-bar__link">
+Browse Products
+</span>
+</a>
+</li>
+<li>
+<a href="http://resources.careerbuilder.com/h">
+<span class="top-bar__link">
+Resource Center
+</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="flyout">
+<a href="#">
+Browse Products
+<i class="fa fa-caret-down"></i>
+</a>
+<ul>
+<li>
+<a href="/talentstream/sourcing-technology/broadbean-job-distribution"><span class="top-bar__link">
+Broadbean Job Distribution
+</span>
+<br>
+<span class="top-bar__subtitle">
+Multi-job posting across networks
+</span>
+</a>
+</li>
+<li>
+<a href="/talentstream/sourcing-technology/search"><span class="top-bar__link">
+CareerBuilder Search
+</span>
+<br>
+<span class="top-bar__subtitle">
+Advanced resume search
+</span>
+</a>
+</li>
+<li>
+<a href="/talentstream/recruitment-software/engage"><span class="top-bar__link">
+Talentstream Engage
+</span>
+<br>
+<span class="top-bar__subtitle">
+Career site and talent network
+</span>
+</a>
+</li>
+<li>
+<a href="/talentstream/recruitment-software/recruit"><span class="top-bar__link">
+Talentstream Recruit
+</span>
+<br>
+<span class="top-bar__subtitle">
+Pre-hire platform
+</span>
+</a>
+</li>
+<li>
+<a href="/all-products"><span class="top-bar__link">
+View All Products
+</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://resources.careerbuilder.com">
+Resource Center
+</a>
+</li>
+</ul>
+</div>
+<div class="top-bar__demo inline-popups">
+<a class="top-bar__demo__button button button--tertiary track-gtm-main-navCTA animated-popup" data-effect="mfp-zoom-in" href="#top-bar__demo">
+Request Demo
+</a>
+<div class="popup__wrapper--iframe mfp-with-anim mfp-hide" id="top-bar__demo">
+<iframe allowtransparency="true" frameborder="0" src="https://go.pardot.com/l/27812/2016-07-06/gwsk9" style="border: 0" type="text/html"></iframe>
+</div>
+</div>
+
+<div class="top-bar--secondary text--subnav">
+<ul class="top-bar--secondary__links">
+<li class="top-bar__signin">
+<a href="http://employer.careerbuilder.com/jobposter/mycb.aspx"><i class="fa fa-lock fa-lg"></i>
+<span class="login-state--text">
+Sign In
+</span>
+</a>
+</li>
+<li class="top-bar__cart">
+<a href="https://employer.careerbuilder.com/ecommerce/global/shoppingcart.aspx">
+<i class="fa fa-shopping-cart fa-lg"></i>
+<span id="top-bar__cart-total">$0.00</span>
+Cart
+</a>
+</li>
+<li>
+<a href="tel:+1-877-345-5256">
+Sales: 1.877.345.5256
+</a>
+</li>
+</ul>
+<div class="inline-popups__no-bg top-bar__coach-mark">
+<a class="hidden animated-popup top-bar__coach-mark__link" data-effect="mfp-zoom-in" href="#coach-mark"></a>
+<div class="mfp-with-anim mfp-hide top-bar__coach-mark__popup" id="coach-mark">
+<span class="coach-mark__text">
+Already Purchased?
+</span>
+<br>
+<a class="button button--primary" href="http://employer.careerbuilder.com/jobposter/mycb.aspx">
+Sign In to Your Account!
+</a>
+</div>
+</div>
+
+</div>
+
+<div class="top-bar--job-seeker text--subnav">
+<ul>
+<li>
+<a href="http://www.careerbuilder.com">
+For Job Seekers
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+
+<!-- reading-header -->
+
+<!-- header_medium -->
+<header class="header header--medium ">
+<div class="header__wrapper">
+<div class="container">
+<snippet id="reading--header"><span><!--{cke_protected}{C}%3C!%2D%2D%20header-medium%20%2D%2D%3E--> </span><span><!--{cke_protected}{C}%3C!%2D%2D%20header__subnav%20%2D%2D%3E--> </span><div class="header--reading__subnav"><br></div> <span> <!--{cke_protected}{C}%3C!%2D%2D%20header__headline%20%2D%2D%3E--> </span><h1 class="header__headline text--headline text--white header--reading__headline"><span>Terms &amp; Conditions</span></h1> <span> </span></snippet>
+</div> <span> </span>
+</div>
+
+</header>
+
+<div class="container reading-wrapper">
+<div class="reading-content-box">
+<snippet id="reading--body"><p><strong>1. Introduction.</strong> Please read this page carefully. It contains the terms and conditions (the “Terms and Conditions”) governing your access to and use of the CareerBuilder Web Sites and the Services (as each are defined below) provided by CareerBuilder, LLC or one of its divisions (collectively, “CareerBuilder”). If you do not accept these Terms and Conditions or you do not meet or comply with their provisions, you may not use the CareerBuilder Web Sites or Services. These Terms and Conditions are effective as of September 21, 2015. </p>
+<p><strong>2. Binding Agreement.</strong> These Terms and Conditions (as they may be amended from time to time by CareerBuilder), together with your Advertising and Candidate Search Agreement (if applicable), form a binding agreement (the "Agreement") between you and CareerBuilder.  Your access to or use of the CareerBuilder Web Sites or Services indicates your acceptance of these Terms and Conditions.  You are agreeing to use the Sites at your own risk. </p>
+<p><strong>3. Certain Definitions.</strong> The following definitions apply to this Agreement:</p>
+<p><strong>3.1 “CareerBuilder Materials”</strong> includes any materials, methodologies, implementation plans or other intellectual property used during the provision of Services.</p>
+<p><strong>3.2 “CareerBuilder Web Site” or the “Site” (collectively, the “CareerBuilder Websites” or the “Sites”)</strong> means any web site under CareerBuilder’s control, whether partial or otherwise and includes such Site’s  Content, Text, Graphics, Design, Programming, CareerBuilder Materials and Services (as applicable in each context).</p>
+<p><strong>3.3  “Content”</strong> includes all Text, Graphics, Design and Programming used on the Sites.</p>
+<p><strong>3.4  “Design”</strong> includes the color combinations and the page layout of the Sites. "Programming" includes both client-side code (HTML, JavaScript, etc.) and server-side code (Active Server Pages, VBScript, databases, etc.) used on the Sites.</p>
+<p><strong>3.5 “Document”</strong> refers to any posting to a Site, whether job or resume. </p>
+<p><strong>3.6 “Employer”</strong> means a person or entity that is accessing a Site to post a job or utilizing the Services for any reason related to the purpose of seeking candidates for employment.</p>
+<p><strong>3.7 “Employer Materials”</strong> includes any brochures, emails, sample job postings, web site content, career fair material, audio, videos, photographs, logos, trademarks, service marks, domain names, documents or other materials provided by Employer, if any, for use in connection with the Services.</p>
+<p><strong>3.8 “Graphics”</strong> includes all logos, buttons, and other graphical elements on the Sites, with the exception of paid advertising banners.</p>
+<p><strong>3.9 “Job Seeker”</strong> means a User who is accessing a Site to search for a job or in any other capacity except as an Employer.</p>
+<p><strong>3.10 “Services”</strong> means any services provided by CareerBuilder or its agents described herein and specified more fully in the Service Activation Agreement.    </p>
+<p><strong>3.11 “Text”</strong> includes all text on every page of the Sites, whether editorial, navigational, or instructional.</p>
+<p><strong>3.12 “User”</strong> refers to any individual or entity that uses any aspect of the Sites. </p>
+<p><strong>3.13 “You” or “you”</strong> means the person who (or the entity on behalf of whom you are acting) that is agreeing to these Terms and Conditions. </p>
+<p><strong>4. Intellectual Property Rights and Acceptable Use of the Sites and Services. </strong></p>
+<p><strong>4.1 General Use Rules.</strong> The Sites are intended for individuals seeking employment and for employers or recruiters seeking candidates for employment. You may use the Sites only for lawful purposes within the stated context of CareerBuilder's intended and acceptable use of the Sites. CareerBuilder is the sole interpreter of the Sites’ intended and acceptable use. </p>
+<p><strong>4.2 CareerBuilder Intellectual Property Rights.</strong> The Sites, the CareerBuilder Materials and all right, title and interest in and to the Sites and CareerBuilder Materials are the sole property of CareerBuilder or its licensors, and are protected by United States and foreign copyright, trademark and other laws. Except for the limited licenses expressly granted to you in these Terms and Conditions, CareerBuilder reserves for itself and its licensors all other rights, title and interest. Without limitation on the foregoing, you may not reproduce, modify, display, sell, or distribute the Content or CareerBuilder Materials, or use them in any other way for public or commercial purpose.  Notwithstanding anything to the contrary contained herein, this prohibition includes: (a) copying or adapting the HTML code used to generate web pages on the Sites; (b) using or attempting to use engines, manual or automated software, tools, devices, agents, scripts, robots or other means, devices, mechanisms or processes (including, but not limited to, browsers, spiders, robots, avatars or intelligent agents) to navigate, search, access, “scrape,” “crawl,” or “spider” any web pages or any Services provided on the Sites other than the search engine and search agents available from CareerBuilder on such CareerBuilder Sites and other than generally available third party web browsers (e.g., Internet Explorer, Firefox, Safari); and (c) aggregating, copying or duplicating in any manner any of the Content or information available from any of the CareerBuilder Sites, without the express written consent of CareerBuilder.  The use of the Content on any other web site or in a networked computer environment for any purpose is strictly prohibited.  The CareerBuilder Materials are not considered to be works for hire and you may duplicate such CareerBuilder Materials only for the purposes outlined in the Service Activation Agreement.  "CareerBuilder," “Personified”, the CareerBuilder design logo and certain other names or logos are service marks or trademarks of CareerBuilder, and all related product and service names, design marks and slogans are the service marks or trademarks of CareerBuilder. In addition, the "look" and "feel" of the Sites (including color combinations, button shapes, layout, design and all other graphical elements) are also protected by CareerBuilder's trademarks, service marks and copyrights. Any code that CareerBuilder creates to generate or display the Content or the pages making up the Sites is also protected by CareerBuilder’s copyright.  You must retain all copyright, trademark, service mark and other proprietary notices contained on the Content or CareerBuilder Materials on any authorized copy you make of the Content or CareerBuilder Materials.  All other product and service marks contained on the Sites are the trademarks of their respective owners.</p>
+<p><strong>4.3 License to Use by Users who are Job Seekers.</strong> CareerBuilder hereby grants you a limited, terminable, non-exclusive right to access and use the Sites only for your personal use seeking employment opportunities for yourself. This authorizes you to view and download a single copy of the material on the Sites solely for your personal, noncommercial use. You agree that you are solely responsible for the content of any Document you post to a Site and any consequences arising from such posting. Your use of the Sites is a privilege. CareerBuilder reserves the right to suspend or terminate that privilege for any reason at any time, in its sole discretion. </p>
+<p><strong>4.4 License to Use by Users who are Employers.</strong> CareerBuilder hereby grants you a limited, terminable, non-exclusive right to access and use the Sites only for your internal business use seeking candidates for employment. This authorizes you to view and download a single copy of the material on the Sites solely for your personal use directly related to searching for and recruiting job prospects. CareerBuilder also grants you a limited, terminable, non-exclusive license to use the CareerBuilder Materials and Services for your internal use only.  You may not sell, transfer or assign any of the Services or your rights to any of the Services provided by CareerBuilder to any third party without the express written authorization of CareerBuilder. You agree that you are solely responsible for the content of any Document you post to a Site and any consequences arising from such posting. CareerBuilder reserves the right to suspend or terminate your access and use at any time if CareerBuilder determines that you are in breach of these Terms and Conditions. </p>
+<p><strong>4.5 Employer Materials.</strong>  Employer represents, warrants and covenants that any Employer Materials provided by Employer for use in connection with the Services will not violate any laws or regulations or third-party proprietary rights, including, without limitation, copyright, trademark, obscenity, rights of publicity or privacy, and defamation laws.  Employer hereby grants CareerBuilder a non-exclusive, worldwide, royalty-free license to use the Employer Materials and to hyperlink to Employer’s website in connection with the Services. </p>
+<p><strong>4.6 Use of Aggregate Data.</strong>  You understand and agree that CareerBuilder owns and has the right to collect, extract, compile, synthesize, and analyze Aggregate Data. CareerBuilder may use such Aggregate Data for any lawful business purpose without a duty of accounting to you, provided that the data and information is used only in an aggregated and anonymized form so that it cannot be identifiable as relating to you, your Company or to any other Job Seekers.  “Aggregate Data” means de-identified aggregated data or information regarding Job Seekers’ educational or career history (including, by way of example and not limitation, aggregate data relating to Job Seekers’ occupation, location, salary, education and experience).</p>
+<p><strong>4.7 Other Specific Rules Regarding Site Usage.</strong> You represent, warrant and agree that you (a) are at least 13 years of age or older, and if under the age of 18 or the age of majority as that is defined in your jurisdiction, you will only use the Sites and Services under the supervision of a parent, legal guardian, or other responsible adult; and (b) will not use (or plan, encourage or help others to use) the Sites for any purpose or in any manner that is prohibited by these Terms and Conditions or by applicable law. It is your responsibility to ensure that your use of the Sites complies with these Terms and Conditions and all applicable laws.  </p>
+<p><strong>4.8 User Submissions.</strong>  CareerBuilder welcomes your comments regarding the Services and the Sites and appreciates hearing from you. Please note, however, that CareerBuilder does not accept or consider creative ideas, suggestions, inventions or materials other than those which it has specifically requested. If you submit feedback on the Services, please be specific in your comments and do not submit creative ideas, inventions, suggestions, or materials. If, despite this notice, you send CareerBuilder creative suggestions, ideas, drawings, concepts, inventions, or other information (a "User Submission"), you understand and agree that the User Submission shall become the property of CareerBuilder. User Submission and any elements contained in User Submissions, shall not be subject to any obligation of confidentiality on CareerBuilder’s part, and CareerBuilder will not be liable for any use or disclosure of any User Submission. CareerBuilder shall exclusively own all now known or later discovered rights to the User Submission and shall be entitled to unrestricted use of the User Submission for any purpose whatsoever, commercial or otherwise, without compensation to you or any other person.</p>
+<p><strong>5. Third Party Providers.</strong>  You acknowledge and agree that CareerBuilder may provide the Services using third party providers, including subcontractors and consultants (the “Third Party Providers”).  You agree that, as between CareerBuilder and its Third Party Providers, CareerBuilder will have sole responsibility for handling all billing and contract negotiations.  </p>
+<p><strong>6. Disclaimers and Limitations on CareerBuilder's Liability. </strong></p>
+<p><strong>6.1 Allocation of Responsibility</strong> CareerBuilder assumes no responsibility for Documents posted by Users and no responsibility for the activities, omissions or other conduct of Users. CareerBuilder acts as a portal for the online distribution and publication of User submitted information and has no obligation to screen communications or information in advance and is not responsible for screening or monitoring Documents posted by Users. If notified by a User of a Document which allegedly does not conform to these Terms and Conditions, CareerBuilder may investigate the allegation and determine in good faith and in its sole discretion whether to remove or request the removal of such Document. CareerBuilder has no liability or responsibility to Users for performance or nonperformance of such activities. CareerBuilder may take any action with respect to User submitted information that it deems necessary or appropriate, in its sole discretion. </p>
+<p><strong>6.2 No endorsements by CareerBuilder.</strong> Nothing on the Sites shall be considered an endorsement, representation or warranty with respect to any User or third party, whether in regards to its web site, products, services, hiring, experience, employment or recruiting practices, or otherwise. </p>
+<p><strong>6.3 Warranty Disclaimers. </strong></p>
+<p>(a) The sites are provided on an 'as is' basis without any warranties of any kind, express or implied. CareerBuilder, to the fullest extent permitted by law, disclaims all warranties, including, but not limited to, the warranties of merchantability, title, non-infringement of third parties’ rights, and fitness for a particular purpose. CareerBuilder makes no warranties about the accuracy, reliability, completeness, or timeliness of the sites. </p>
+<p>(b) Without limitation on the foregoing:</p>
+<p>(i) CareerBuilder does not warrant that the sites will operate error-free or that the sites and their servers are free of computer viruses or other harmful mechanisms. If your use of the sites results directly or indirectly in the need for servicing or replacing equipment or data, CareerBuilder is not responsible for those costs.</p>
+<p>(ii) CareerBuilder makes no representations or guarantees regarding the truthfulness, accuracy, legality, completeness, timeliness or reliability of any documents posted by users, or of any other form of communication engaged in by users. Documents may contain inaccuracies or typographical errors. You agree that any reliance on documents posted by users, or on any other form of communication with users, will be at your own risk.</p>
+<p>(iii) CareerBuilder makes no representations or guarantees regarding the content of the sit</p>
+<p>(iv) CareerBuilder makes no representations or guarantees regarding the effectiveness of the services or timeliness of the services in meeting your employment objectives. CareerBuilder does not guarantee that the services will result in candidates being hired, positions being filled or employees being retained, and is not responsible or liable for any business, employment, hiring and/or salary decisions, for whatever reason made, made by you.</p>
+<p><strong>6.4 Damage Limitations, Allocations of Liability and Equitable Relief. </strong></p>
+<p>(a) You assume all responsibility and risk for your use of the sites, the internet generally, and the documents or employer materials that you post, provide or access and for your conduct on and off the sites.</p>
+<p>(b) In no event shall CareerBuilder (or any of its officers, directors, shareholders, employees, subsidiaries, affiliates, agents or advertisers), be liable for any non-direct damages whatsoever (including, without limitation, incidental and consequential damages, lost profits, or damages resulting from lost data, lost employment opportunity, or business interruption) resulting from or arising under or in connection with services or the use or access to, or the inability to use or access, the sites and/or any document, whether based on warranty, contract, tort, or any other legal theory, and whether or not CareerBuilder is advised of the possibility of such damages. </p>
+<p>(c) Because some states or jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, the limitations set forth in the preceding paragraph may not apply to you. If any are held inapplicable or unenforceable for any reason, then CareerBuilder's maximum liability to you for any non-direct type of damages shall be limited to u.s. $200.00 in the aggregate.</p>
+<p>(d) In no event shall CareerBuilder (or any of its officers, directors, shareholders, employees, subsidiaries, affiliates, agents or advertisers), be liable for any direct damages in excess in the aggregate of us$200.00 (or, if you are an employer with a services agreement with CareerBuilder, the amounts actually paid by you to CareerBuilder under this agreement if greater than us$200.00).</p>
+<p>(e) Due to the nature of this agreement, in addition to money damages, you agree that CareerBuilder will be entitled to equitable relief upon a breach of this agreement by you.</p>
+<p><strong>6.5 User Authentication.  </strong>Because User authentication on the Internet is difficult, CareerBuilder cannot and does not confirm that each User is who they claim to be. Because CareerBuilder does not and cannot be involved in User-to-User dealings or control the behavior of participants on the Sites, in the event that you have a dispute with one or more Users, you release CareerBuilder from claims, demands and damages (actual and consequential and direct and indirect) of every kind and nature, known and unknown, suspected and unsuspected, disclosed and undisclosed, arising out of or in any way connected with such disputes. </p>
+<p><strong>6.6 California Residents.</strong>  If you are a California resident, you waive California Civil Code Section 1542, which says: "A general release does not extend to claims which the creditor does not know or suspect to exist in his or her favor at the time of executing the release, which if known by him or her must have materially affected his or her settlement with the debtor."</p>
+<p><strong>7. Payment of Services upon Termination of Service Activation Agreement.</strong> If at any time during the course of this Agreement you should terminate a Service Activation Agreement or any other services Agreement in which these Terms and Conditions have been incorporated by reference, then CareerBuilder shall reserve the right to receive all payments from you for the Services used by you up to termination and for fifty percent (50%) of the remaining unused portion of the Service Agreement.</p>
+<p><strong>8. Links to Other Sites.</strong> CareerBuilder contains links to third party web sites. These links are provided solely as a convenience to you and not as an endorsement by CareerBuilder of the contents on such third-party web sites. CareerBuilder is not responsible for the content of linked third-party sites and does not make any representations regarding the content or accuracy of materials on such third-party web sites. If you decide to access linked third-party web sites, you do so at your own risk. </p>
+<p><strong>9. Amendments to this Agreement and Changes to Sites.</strong> CareerBuilder may revise these Terms and Conditions at any time by updating this page. Changes will be binding on you on the date they are posted on the Sites (or as otherwise stated in the any notice of such changes). Any use of a Site will be considered acceptance by you of the then-current Terms and Conditions (including any exhibits thereto) contained on such Site. If at any time you find the Terms and Conditions unacceptable, you may not use the applicable Site any longer. Any new or different terms supplied by you are specifically rejected by CareerBuilder unless CareerBuilder agrees to them in a signed writing specifically including those new or different terms. CareerBuilder may change the Sites at any time. </p>
+<p><strong>10. Indemnity.</strong> You agree to defend, indemnify, and hold harmless CareerBuilder (and its subsidiaries, affiliates, officers, directors, employees and agents) from and against any third party claims, actions or demands (including, without limitation, costs, damages and reasonable legal and accounting fees) alleging or resulting from or in connection with your use of the Sites, any Document posted by you, your use of the Services or your breach of this Agreement. CareerBuilder shall use reasonable efforts to provide you prompt notice of any such claim, suit, or proceeding and may assist you, at your expense, in defending any such claim, suit or proceeding. </p>
+<p><strong>11. User Information and Privacy Policy. </strong></p>
+<p><strong>11.1</strong> When you register on any of the CareerBuilder Sites or in connection with the Services, you will be asked to create an account and provide CareerBuilder with certain information, including but not limited to, a valid email address (“User Information”).   You acknowledge and agree that you have no ownership rights in your account.      </p>
+<p><strong>11.2</strong> All User Information will be used in accordance with the terms of CareerBuilder’s Privacy Policy. Please note, as set forth in the Privacy Policy, that CareerBuilder may collect certain User Information and may contact Users periodically in accordance with the terms of the Privacy Policy. In addition, CareerBuilder reserves the right to comply, in its sole discretion, with legal requirements, requests from law enforcement agencies or requests from government entities, even to the extent that such compliance may require disclosure of certain User Information.  In addition, third parties may retain cached copies of User Information.</p>
+<p><strong>12. Questions and Notices.</strong> Questions concerning the use of the Sites should be directed to Feedback. Notices to CareerBuilder should be sent to the address listed on the Sites.  We will send notice to you at the address submitted by you or to such other address as CareerBuilder reasonably determines is an appropriate address for you. </p>
+<p><strong>13. General.</strong> CareerBuilder contact information is listed on the Sites. CareerBuilder makes no claims that the Content is appropriate or may be downloaded outside of the United States. Access to the Content may not be legal by certain persons or in certain countries, and such persons have no right to access or use the Sites. If you access CareerBuilder from outside of the United States, you do so at your own risk and are responsible for compliance with the laws of your jurisdiction. This Agreement and your Service Activation Agreement, if you have one, are governed by the internal substantive laws of the State of Illinois, without respect to its conflict of laws principles. Jurisdiction for any claims arising under this Agreement or your Service Activation Agreement shall lie exclusively with the state or federal courts in the State of Illinois. The sole relationship between you and CareerBuilder is that of independent contractors. If any provision of this Agreement is found to be invalid by any court having competent jurisdiction, the invalidity of all or part of a provision shall not affect the validity of the remaining parts and provisions of this Agreement, which shall remain in full force and effect. All provisions of this Agreement shall survive termination except those granting access or use to the Sites, and you shall cease all your use and access thereof immediately. You may not assign or transfer your obligations under this Agreement. No waiver of any term of this Agreement shall be deemed a further or continuing waiver of such term or any other term. Except as expressly provided by CareerBuilder in a particular "Legal Notice," or material on particular web pages of the Sites, this Agreement and your Service Activation Agreement where applicable, constitute the entire agreement between you and CareerBuilder. </p>
+<p><strong>14. Rules regarding Posting, Conduct and Security. </strong></p>
+<p><strong>The following rules apply to your use of the Sites and/or the Services.  The list of rules is for illustration only and is not a complete list of all posting, conduct and security rules.  </strong></p>
+<p><strong>14.1 Posting Rules: </strong></p>
+<p>(a) You may not post any Document to a Site that contains: (i) URLs or links to web sites other than to recruitment related pages on your company web site (to advertise your company or web site, see our Advertising Info page.); (ii) copyrighted material (unless you own the copyright or have the owner's permission to post the copyrighted material); (iii) trade secrets (unless you own them or have the owner's permission to post them); (iv) material that infringes on or misappropriates any other intellectual property rights, or violates the privacy or publicity rights of others; (v) irrelevant keywords or white text keywords (including any words embedded in the Document and hidden from the User); (vi) anything that is discriminatory, sexually explicit, obscene, libelous, defamatory, threatening, harassing, abusive, or hateful; or (vii) anything that is embarrassing or offensive to another person or entity. </p>
+<p>(b) You may not use a Document(s) to: (i) impersonate another person, living or dead; (ii) post false, inaccurate or misleading information, opinions or notices (commercial or otherwise) or chain letters; (iii) post advertisements, or solicitations of business (including, but not limited to, email processors, any pyramid scheme or “club membership”); provided, however that CareerBuilder may allow posting of certain training and business opportunities (see 14.1(e) below). </p>
+<p>(c) Your Document(s) must contain sufficient detail to convey clearly to the User the nature and requirements of the job opportunity, or, in the case of Users seeking employment, your qualifications as a candidate for employment. Documents that encourage the User to "email for more details" are not permitted. </p>
+<p>(d) Job postings must describe individual openings for traditional W-2 or 1099 employees.  You may not advertise multiple job openings in a single posting.</p>
+<p>(e) In limited circumstances, at CareerBuilder’s sole discretion, CareerBuilder allows non-traditional job postings such as education/training, business opportunities, franchise, and multi-level marketing opportunities to be posted on the Sites.  These non-traditional job postings may require an investment of time and/or money by the User seeking the position.  CareerBuilder reserves the right, in its sole discretion, to move, modify, or remove entirely a non-traditional job posting if CareerBuilder deems such job posting to conflict with the best interests of its Users or detract from the User experience.  </p>
+<p>(f) Resume postings must contain the accurate resume of a living individual seeking employment on a full-time, part-time, or contractual basis on his or her own behalf. </p>
+<p>(g) CareerBuilder is under no obligation to monitor the Documents posted on the Sites, but it may monitor Documents at random. Documents found to violate the above Posting Rules may be removed at CareerBuilder's sole discretion. </p>
+<p><strong>14.2 Conduct Rules: </strong></p>
+<p>(a) You may not respond to postings by other Users in any manner or for any purpose other than that which is expected (i.e., to apply for the job or to initiate further discussion with the candidate). Communications soliciting the Employer's business are prohibited. </p>
+<p>(b) You may not send unsolicited commercial email to Users. </p>
+<p>(c) Protect your password. Your CareerBuilder account and any related Services accessed through such account are to be accessed and used solely by you. Upon your successful registration for a CareerBuilder account, you will be provided with a unique password that will permit you to access the account. You may not provide your password or otherwise permit access to your CareerBuilder account to any third party. You are responsible for maintaining the confidentiality of your information and password. You agree to protect and keep your password confidential, to change your password on a regular basis, and to maintain appropriate and regularly updated malware scanning and cleaning tools on your network and individual computer(s).You are responsible for all uses of your account, whether or not authorized by you. If others use your password to post inappropriate material on the Sites, you risk losing your access to the Sites. You agree to notify CareerBuilder immediately of any unauthorized use of your account or password. </p>
+<p>(d) Report inappropriate postings or conduct to Feedback. </p>
+<p>(e) You may not delete or revise any material posted by any other person or entity. </p>
+<p>(f) If at any time CareerBuilder comes to the understanding that you: (i) misled CareerBuilder regarding your business practices and/or services, or (ii) purchased services that do not represent your precise business, CareerBuilder reserves the right to terminate your Agreement. </p>
+<p><strong>14.3 Security Rules: </strong></p>
+<p>(a) Users are prohibited from violating or attempting to violate the security of the Sites, including, without limitation: (i) accessing data not intended for such User or logging into a server or account which the User is not authorized to access; (ii) attempting to probe, scan or test the vulnerability of a system or network or to breach security or authentication measures without proper authorization; (iii) attempting to interfere with service to any User, host or network, including, without limitation, via means of submitting a virus to the Sites, overloading, "flooding", "mail bombing" or "crashing"; (iv) sending unsolicited e-mail, including promotions and/or advertising of products or services; (v) forging any TCP/IP packet header or any part of the header information in any e-mail or newsgroup posting. </p>
+<p>(b) Violation of these Security Rules may result in civil or criminal liability. CareerBuilder will investigate occurrences which may involve such violations and may involve, and cooperate with, law enforcement authorities in prosecuting Users who are involved in such violations. </p>
+<p><strong>15.  Copyright Complaints.</strong></p>
+<p><strong>15.1</strong> CareerBuilder respects the intellectual property of others. It is CareerBuilder's policy to respond to claims of copyright and other intellectual property infringement. CareerBuilder will promptly process and investigate notices of alleged infringement and will take appropriate actions under the Digital Millennium Copyright Act ("DMCA") and other applicable intellectual property laws. Upon receipt of notices complying with the DMCA, CareerBuilder may act expeditiously to remove or disable access to any material claimed to be infringing or claimed to be the subject of infringing activity and may act expeditiously to remove or disable access to any reference or link to material or activity that is claimed to be infringing. CareerBuilder will terminate access for Users who are repeat infringers.</p>
+<p><strong>15.2</strong> Notifying CareerBuilder of Copyright Infringement: To provide CareerBuilder notice of an infringement, you must provide a written communication to the attention of "Trust and Site Security" care of<a data-cke-saved-href="mailto:TSST@careerbuilder.com" href="mailto:TSST@careerbuilder.com" pardotclicktrack="true">TSST@careerbuilder.com</a> that sets forth the information specified by the DMCA (<a data-cke-saved-href="http://www.copyright.gov/title17/92chap5.html#512" href="http://www.copyright.gov/title17/92chap5.html#512" pardotclicktrack="true">http://www.copyright.gov/title17/92chap5.html#512</a>). Please also note that you may be liable for damages (including costs and attorneys' fees) if you materially misrepresent that an activity is infringing your copyright.</p>
+<p><strong>15.3</strong> Providing CareerBuilder with Counter-Notification: If we remove or disable access to content in response to an infringement notice, we will make reasonable attempts to contact the owner or administrator of the affected site or content. If you feel that your material does not constitute infringement, you may provide CareerBuilder with a counter notification by written communication to the attention of "Trust and Site Security" at <a data-cke-saved-href="mailto:TSST@careerbuilder.com" href="mailto:TSST@careerbuilder.com" pardotclicktrack="true">TSST@careerbuilder.com</a> that sets forth all of the necessary information required by the DMCA (<a data-cke-saved-href="http://www.copyright.gov/title17/92chap5.html#512" href="http://www.copyright.gov/title17/92chap5.html#512" pardotclicktrack="true">http://www.copyright.gov/title17/92chap5.html#512</a>). Please note that you may be liable for damages (including costs and attorneys' fees) if you materially misrepresent that an activity is not infringing the copyrights of others. If you are uncertain whether an activity constitutes infringement, we recommended seeking advice of an attorney.</p>
+<p><strong>Please note that Sections 16 and 17 below contain terms and conditions that apply to specific Services (Resume Database and WorkForce Analytics) and they are part of this Agreement if you are purchasing or using any of those specific Services.  </strong></p>
+<p><strong>16. Additional Terms in Connection with Use of Resume Database.</strong>  If, in your Service Activation Agreement with CareerBuilder, you are purchasing Resume Database access, the following additional terms apply to you:</p>
+<p><strong>16.1</strong> CareerBuilder grants you a limited, personal, terminable, non-transferable, non-exclusive right to access the CareerBuilder Resume Database via the Sites for the purpose of viewing and/or downloading a single copy of available paper and/or video resumes (collectively “Resumes”) solely for your use.  </p>
+<p><strong>16.2</strong> The Resume Database is to be accessed and used solely by those Users whom you authorize to access the Resume Database through your account (each an “Authorized RDB User”).   Each Authorized RDB User will be issued a unique Resume Database Seat (a “Seat”) through which they can perform the actions described in 16.1.  Each Seat must be purchased in advance by you and may be accessed by using unique login credentials.  You are only permitted to assign one Seat per Authorized RDB User and Authorized RDB Users may not share their login credentials or Seat access amongst themselves, with any other co-workers or with any other third parties. </p>
+<p><strong>16.3</strong> Authorized RDB Users may download, one at a time, up to either 50 Resumes per day (per Seat) or 3000 Resumes per month (per Seat) depending on the Resume Database product purchased by you in accordance with the terms of your Agreement. Please note that the term “download” shall include: (i) viewing or clicking on a Resume page; (ii) saving a Resume to a folder; (iii) printing a Resume; (iv) copying a Resume; (v) emailing or forwarding a Resume; and/or (vi) any other action that results or could result in your use of a Resume or any of the information contained therein. </p>
+<p><strong>16.4</strong> Neither you nor your Authorized RDB Users may use the Resume Database in any way which, in CareerBuilder’s sole judgment, adversely affects CareerBuilder’s business, business prospects, the performance or function of any Site or the Resume Database, or interferes with the ability of other subscribers to access the Resume Database.  Further, use of the Resume Database by you or by your Authorized RDB Users may not interfere with or violate, in any manner, the privacy election of CareerBuilder Job Seekers.  You understand and agree that any violation of section 16 will give CareerBuilder the right to immediately terminate any and all access to the RDB and to terminate any corresponding Agreements.</p>
+<p><strong>16.5</strong>  You and your Authorized RDB Users may use your subscription to the Resume Database only for seeking candidates for employment and are specifically prohibited from using information contained in the Resume Database to (i) sell or promote any products or services, (ii) send emails that, in CareerBuilder’s sole judgment, are excessive in frequency or are irrelevant to a particular Job Seeker or (iii) take any other action that is, in CareerBuilder’s sole judgment, inconsistent with these Terms and Conditions, misleading or incomplete, or in violation of any Federal, State, Local law, statute, code, rule, or regulation.</p>
+<p><strong>16.6</strong> CareerBuilder may terminate, suspend, update, alter or supplement, at its sole discretion, all or any part of the Resume Database at any time. By permitting access to the CareerBuilder Resume Database, CareerBuilder does not convey any interest in or to the Resume Database or any other CareerBuilder property or Services. All right, title and interest in and to the Resume Database is and shall remain in CareerBuilder.</p>
+<p><strong>17. Additional Terms in Connection with Use of Workforce Analytics Services.</strong>  If, in your Service Activation Agreement with CareerBuilder, you are purchasing any of our Workforce Analytics Services, the following additional terms apply to you: </p>
+<p><strong>17.1 Use of Reports.</strong>  CareerBuilder hereby grants you a limited, non-exclusive, non-assignable (except as otherwise provided in this Agreement), worldwide right and license to: (a) store and use any Workforce Analytics Services for your internal management, reference or informational purposes, and (b) distribute copies of any reports generated by the Workforce Analytics Services (each a “Report”),  subject to the conditions that (i) such copies may be distributed only in printed or static electronic PDF format, (ii) in providing a copy of any Report to a recipient, you may not charge the recipient any kind of fee or other consideration, and (iii) you shall not remove or modify any branding, marks, copyright or trademark notices, or any other notices or disclaimers set forth in any Report without CareerBuilder’s prior written consent, or otherwise modify the Report in any way so as to falsely or otherwise misrepresent its content.  Further, you may not issue press releases or make other public statements regarding any Report, or the contents or conclusions in same, without the express written consent of CareerBuilder.</p>
+<p><strong>17.2 Use of Your Data.</strong>  If you have purchased Workforce Analytics Services, then you may provide CareerBuilder with the names, addresses, telephone numbers, e-mail addresses, resumes and other personally identifiable information of Job Seekers sourced from your own files (“Job Seeker Data”).  You hereby grant CareerBuilder a non-exclusive license to use, copy, modify, store, transmit and display Job Seeker Data solely to the extent reasonably required to provide and maintain the Services for Company’s use. Notwithstanding the foregoing, you understand and agree that CareerBuilder may derive Aggregate Data from the Job Seeker Data and may use such Aggregate Data in accordance with section 4.6.</p>
+<span><!--{cke_protected}{C}%3C!%2D%2D%20image%20grid%20%2D%2D%3E--> </span></snippet>
+</div>
+</div>
+
+<!-- global footer -->
+<footer class="footer">
+<div class="footer__row footer__row--email-subscribe">
+<section class="email-subscribe container">
+<p class="email-subscribe-message--success hidden" id="email-subscribe_success">Thank you for subscribing to our newsletter. More great content headed your way!</p>
+<p class="email-subscribe-message--error hidden" id="email-subscribe_error">Sorry, there was a problem with your email address. Please try again.</p>
+<form action="https://go.pardot.com/l/27812/2016-02-02/6r9pz" id="email-subscribe_form" method="post">
+<h3 class="form-header">
+Sign Up for the Latest Recruitment News, Tips and Advice
+</h3>
+<div class="fieldset--large">
+<label class="sr-only required" for="27812_3235pi_27812_3235">Email</label>
+<input class="fieldset--large__input" id="27812_3235pi_27812_3235" name="27812_3235pi_27812_3235" placeholder="Your Email Address" required type="email">
+<!-- Pardot honeypot field -->
+<div style="position:absolute; left:-9999px; top: -9999px;">
+<label for="pardot_extra_field">Comments</label>
+<input id="pardot_extra_field" name="pardot_extra_field" tabindex="-1" type="text">
+</div>
+<!-- forces IE5-8 to correctly submit UTF8 content -->
+<input name="_utf8" type="hidden" value="☃">
+<button accesskey="s" class="button button--medium fieldset--large__button" type="submit">Subscribe</button>
+</div>
+</form>
+</section>
+
+</div>
+<div class="footer__row footer__row--content container">
+<nav class="footer__text--links">
+<ul id="main_footer_links">
+<li>
+<a href="/company/contact-us">Contact Us</a>
+</li>
+<li>
+<a id="about_us" href="#">About Us</a>
+</li>
+<li>
+<a href="/company/terms-and-conditions">Terms &amp; Conditions</a>
+</li>
+<li>
+<a href="/company/security-and-privacy">Security &amp; Privacy</a>
+</li>
+<li>
+<a href="/company/advertise">Advertise With Us</a>
+</li>
+<li>
+<a href="/company/partners-and-affiliates">Partners &amp; Affiliates</a>
+</li>
+</ul>
+<ul id="about_us_footer_links">
+<li>
+<a href="#" id="about_us_back">&lt; Back</a>
+</li>
+<li>
+About Us:
+</li>
+<li>
+<a class="footer__sub--links" href="/company/overview">Overview</a>
+</li>
+<li>
+<a class="footer__sub--links" href="https://www.careerbuildercareers.com/" target="_blank">Careers</a>
+</li>
+<li>
+<a class="footer__sub--links" href="/company/history">History</a>
+</li>
+<li>
+<a class="footer__sub--links" href="/company/leadership">Leadership</a>
+</li>
+<li>
+<a class="footer__sub--links" href="/company/locations">Locations</a>
+</li>
+<li>
+<a class="footer__sub--links" href="/company/arc">Research Collaboration</a>
+</li>
+<li>
+<a class="footer__sub--links" href="http://www.rightskill.com" target="_blank">RightSkill</a>
+</li>
+</ul>
+
+</nav>
+<div class="footer__share-links">
+<ul>
+<li>
+<a href="https://www.facebook.com/CBforEmployers">
+<i class="fa fa-facebook fa-2x"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/careerbuilder-for-employers">
+<i class="fa fa-linkedin fa-2x"></i>
+</a>
+</li>
+<li>
+<a href="https://twitter.com/cbforemployers">
+<i class="fa fa-twitter fa-2x"></i>
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/cbforemployers">
+<i class="fa fa-youtube fa-2x"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="footer__branding">
+<img alt="CareerBuilder logo" class="footer__logo" src="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--white-d7fc2f46b075f9145b489ecc6d4a8079f2b1010be22dbf31a48709536dfdf0af.svg">
+<p class="footer__copyright">
+©2016
+CareerBuilder, LLC. All rights reserved.
+<br>
+200 N. LaSalle Street, Chicago, IL
+</p>
+</div>
+</div>
+</footer>
+
+<a class="modal-open--first-time-user" href="" style="display: none;">Clicky!</a>
+<script src="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-a3bf45560c9608923cde3bd51fcbdd5957eb09b7fe8494d529ca857335c3a879.js"></script>
+<script>
+//<![CDATA[
+window.gon={};gon.env="production";gon.first_time_popup=false;gon.careerbuilder={"environment_url_prefix":"","auth":{"client_id":"C14816ab4","authenticated":null,"user_email":null}};
+//]]>
+</script>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+  
+  fbq('init', '575283812576156');
+  fbq('track', "PageView");
+</script>
+<noscript>
+<img height="1" src="https://www.facebook.com/tr?id=575283812576156&amp;ev=PageView&amp;noscript=1" style="display:none" width="1">
+</noscript>
+
+<script>
+  // Use an IIFE to keep our code from polluting the global scope
+  (function(window) {
+    addEvent(window, 'message', function(message) {
+      // The namespace of the Data Layer is window.dataLayer by default,
+      // but this CAN be changed; ensure that this is not customized
+      // in the context this code will execute in
+      var dataLayer = window.dataLayer = window.dataLayer || []; // Safely instantiate dataLayer locally
+      // The message.data value is arbitrary and can be customized
+      if (message.data === 'formSubmit') { // Check this is a whitelisted message
+        dataLayer.push({
+          // The key 'event' is required for GTM; the value is arbitrary and can be customized
+          'event': 'formSubmit' // Notify GTM via pushing this event
+        });
+      } else if (message.data === 'adrollSubmit') {
+        try{
+           __adroll.record_user({"adroll_segments": "0ce55ae5"})
+        } catch(err) {}
+      }
+    });
+    // Cross-browser event listener
+    function addEvent(el, evt, fn) {
+      if (el.addEventListener) {
+        return el.addEventListener(evt, fn);
+      }
+      if (el.attachEvent) {
+        return el.attachEvent('on' + evt, function(evt) {
+          // Call the event to ensure uniform 'this' handling, pass it event
+          fn.call(el, evt);
+        });
+      }
+      if (typeof el['on' + evt] === 'undefined' || el['on' + evt] === null) {
+        return el['on' + evt] = function(evt) {
+          // Call the event to ensure uniform 'this' handling, pass it event
+          fn.call(el, evt);
+        };
+      }
+    }
+  })(window);
+</script>
+
+<script>
+  var _vis_opt_lib = 'https://d5phz18u4wuww.cloudfront.net/va_iframe_support.js';
+  var _vwo_code = (function() {
+    var account_id = "70739",
+      settings_tolerance = 2000,
+      library_tolerance = 2500,
+      use_existing_jquery = false,
+      // DO NOT EDIT BELOW THIS LINE
+      f = false,
+      d = document;
+    return {
+      use_existing_jquery: function() {
+        return use_existing_jquery;
+      },
+      library_tolerance: function() {
+        return library_tolerance;
+      },
+      finish: function() {
+        if (!f) {
+          f = true;
+          var a = d.getElementById('_vis_opt_path_hides');
+          if (a) a.parentNode.removeChild(a);
+        }
+      },
+      finished: function() {
+        return f;
+      },
+      load: function(a) {
+        var b = d.createElement('script');
+        b.src = a;
+        b.type = 'text/javascript';
+        b.innerText;
+        b.onerror = function() {
+          _vwo_code.finish();
+        };
+        d.getElementsByTagName('head')[0].appendChild(b);
+      },
+      init: function() {
+        settings_timer = setTimeout('_vwo_code.finish()', settings_tolerance);
+        this.load('//dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&r=' + Math.random());
+        var a = d.createElement('style'),
+          b = 'body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',
+          h = d.getElementsByTagName('head')[0];
+        a.setAttribute('id', '_vis_opt_path_hides');
+        a.setAttribute('type', 'text/css');
+        if (a.styleSheet) a.styleSheet.cssText = b;
+        else a.appendChild(d.createTextNode(b));
+        h.appendChild(a);
+        return settings_timer;
+      }
+    };
+  }());
+  _vwo_settings_timer = _vwo_code.init();
+</script>
+
+<noscript>
+<iframe height="0" id="main-google-tag-manager" src="//www.googletagmanager.com/ns.html?id=GTM-PPCSWP" style="display:none;visibility:hidden" width="0"></iframe>
+</noscript>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer', "GTM-PPCSWP");
+</script>
+
+<script>
+  piAId = '28812';
+  piCId = '1949';
+  
+  (function() {
+    function async_load(){
+      var s = document.createElement('script'); s.type = 'text/javascript';
+      s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+      var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+    }
+    if(window.attachEvent) { window.attachEvent('onload', async_load); }
+    else { window.addEventListener('load', async_load, false); }
+  })();
+</script>
+
+<script src="https://c.la3-c2-chi.salesforceliveagent.com/content/g/js/35.0/deployment.js" type="text/javascript"></script>
+<script>
+  liveagent.init('https://d.la3-c2-chi.salesforceliveagent.com/chat', '57230000000CaTr', '00D30000001GGg7');
+  if (!window._laq) { window._laq = []; }
+    window._laq.push(function(){liveagent.showWhenOnline('57330000000KylM', document.getElementById('liveagent_button_online_57330000000KylM'));
+    liveagent.showWhenOffline('57330000000KylM', document.getElementById('liveagent_button_offline_57330000000KylM'));
+  });
+</script>
+<script src="//fast.wistia.com/embed/medias/mqvbqj7pw3.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+
+
+<script async="async" src="//my.hellobar.com/a50470daa8141ebda5d428de66b7fbdffdb45be3.js" type="text/javascript"></script>
+
+<script>
+  // Adroll
+  adroll_adv_id = '3IYDMPEVIZGNXGLH6FT3NR';
+  adroll_pix_id = '62IT67FDYZFHBBD54CPXHU';
+  /* OPTIONAL: provide email to improve user identification */
+  /* adroll_email = "username@example.com"; */
+  var _onload = function(){
+    if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+    if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+    var scr = document.createElement("script");
+    var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+    scr.setAttribute('async', 'true');
+    scr.type = "text/javascript";
+    scr.src = host + "/j/roundtrip.js";
+    ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+  };
+  if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+  else {window.attachEvent('onload', _onload)}
+</script>
+
+<script src="https://d30c0uivkwifa5.cloudfront.net/assets/application-2f2bbb77216515a3a0ab202019ee94a15ea2b4f1cabf84fb4593c85994ff7a2c.js" data-turbolinks-eval="false"></script>
+</body>
+</html>
