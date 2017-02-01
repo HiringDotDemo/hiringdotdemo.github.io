@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+  // <![CDATA[
+  window.DY = window.DY || {};
+  DY.recommendationContext = {
+    type: 'HOMEPAGE',
+    data: ['']
+  };
+  // ]]
+</script>
+<script src="//cdn.dynamicyield.com/api/8767499/api_dynamic.js" type="text/javascript"></script>
+<script src="//cdn.dynamicyield.com/api/8767499/api_static.js" type="text/javascript"></script>
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta charset="utf-8">
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtUVxMPXEULXVYWUV5QXE4=","queueTime":0,"applicationTime":39,"agent":""}</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtUVxMPXEULXVYWUV5QXE4=","queueTime":0,"applicationTime":44,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
 <!-- Responsive/Mobile Content Controls -->
 <meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0" name="viewport">
-<meta content="Find out how to make your recruiting easier, more effective and more cost effective with recruitment tools from CareerBuilder." name="description">
-<meta content="careerbuilder-login,careerbuilder-log-in,tech-hiring-tools,hiring-products,staffing-and-recruiting-software-best-practices,tools-for-recruitment,cb-resource-center,careerbuilder-careers,candidate-search-tool,employer-search,my-careerbuilder,career-builder-resumes,careerbuilder-login-page,employers-looking-for-employees,solutions-for-recruitment,free-candidate-database-for-recruiters,find-resumes,find-resumes-to-hire,careerbuilder.com-sign-in,workterra,career-builders-login,careerbuilder-sign-in,employer-search-for-employees,tools-for-recruiters,hiring-solutions,recruiter-tools,pre-hire-platform,careerbuilder-for-employers,recruitment-software-solutions,recruitment-network,recruitment-software,sourcing-and-recruitment-platform,sourcing-and-recruitment-tools,pre-hire-platform-solution,candidate-profiles,candidate-experience,career-sites,talentstream-engage,post-jobs,post-a-job-now,buy-jobs-online,careerbuilder-search,resume-database,recruitment-advertising,sourcing-technology,recruitment-and-onboarding,onboarding-software,emsi-analytics,aurico-products,background-screening,background-check-software,careerbuilder-resources,hiring-resources,talent-acquisition-resources,hiring-blogs,talent-acquisition-blogs,recruitment-news,careerbuilder-empower,human-capital-management-solutions,applicant-tracking-system,post-a-job,search-resumes" name="keywords">
+<meta content="Find out how to make your recruiting easier, more effective and more cost effective with hiring data, HCM software and recruitment solutions from CareerBuilder." name="description">
+<meta content="careerbuilder-employer-login,careerbuilder-us,careerbuilder-login,careerbuilder-log-in,tech-hiring-tools,hiring-products,staffing-and-recruiting-software-best-practices,tools-for-recruitment,cb-resource-center,careerbuilder-careers,candidate-search-tool,employer-search,my-careerbuilder,career-builder-resumes,careerbuilder-login-page,employers-looking-for-employees,solutions-for-recruitment,free-candidate-database-for-recruiters,find-resumes,find-resumes-to-hire,careerbuilder.com-sign-in,workterra,career-builders-login,careerbuilder-sign-in,employer-search-for-employees,tools-for-recruiters,hiring-solutions,recruiter-tools,pre-hire-platform,careerbuilder-for-employers,recruitment-software-solutions,recruitment-network,recruitment-software,sourcing-and-recruitment-platform,sourcing-and-recruitment-tools,pre-hire-platform-solution,candidate-profiles,candidate-experience,career-sites,talentstream-engage,post-jobs,post-a-job-now,buy-jobs-online,careerbuilder-search,resume-database,recruitment-advertising,sourcing-technology,recruitment-and-onboarding,onboarding-software,emsi-analytics,aurico-products,background-screening,background-check-software,careerbuilder-resources,hiring-resources,talent-acquisition-resources,hiring-blogs,talent-acquisition-blogs,recruitment-news,careerbuilder-empower,human-capital-management-solutions,applicant-tracking-system,post-a-job,search-resumes" name="keywords">
 <!-- Social media meta tags -->
 <meta content="https://hiring.careerbuilder.com/" property="og:url">
 <meta content="website" property="og:type">
 <meta content="Hiring Solutions and Recruiter Tools for Recruitment | CareerBuilder for Employers" property="og:title">
-<meta content="Find out how to make your recruiting easier, more effective and more cost effective with recruitment tools from CareerBuilder." property="og:description">
+<meta content="Find out how to make your recruiting easier, more effective and more cost effective with hiring data, HCM software and recruitment solutions from CareerBuilder." property="og:description">
 <meta content="CareerBuilder for Employers" property="og:site_name">
 <meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-fb-9169b970258d64c0200bc26474f89ba088ffd0a660f44778fd42f7149e2c4dba.png" property="og:image">
 <meta content="600" property="og:image:width">
@@ -57,13 +68,13 @@
 </script>
 
 <link href="https://hiring.careerbuilder.com/" rel="canonical">
-<link rel="shortcut icon" type="image/x-icon" href="https://d30c0uivkwifa5.cloudfront.net/assets/favicon-11a54e483811b662a28fdd298546c2c1b9c4048663fe08565d795c2a44d51a2d.ico">
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-9731fd0bc0ffd3ce165b066f9fe65e7f58f804b5fa582e8537bc2794b1fb932f.css">
+<link rel="shortcut icon" type="image/x-icon" href="https://d30c0uivkwifa5.cloudfront.net/assets/icons/favicon-11a54e483811b662a28fdd298546c2c1b9c4048663fe08565d795c2a44d51a2d.ico">
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-ee75a24420759ca8391620b3d67897d7c8577783836747a5df6f7461b443ae3b.css">
 <!--[if IE 9]>
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie9-9512071f47a86075df1220015ac2094ecf1dd6ad880eab18305a50511dcd41b7.css" />
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie9-88297770eef107777a3623e3af91c010323483bee20ddd14e6ea02921ccb8c5d.css" />
 <![endif]-->
 <!--[if lte IE 8]>
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-ded79f97f31bd08e731a94dce56297d4398b86e3c6690165027fba93d013835b.css" />
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-3ef1c609d1c6166cb53ee2ab96baaa7619fe512f4d1ad41e0c7c94287fb4d530.css" />
 <![endif]-->
 </head>
 <body class="employer-scope  marketing index ">
@@ -191,12 +202,12 @@ Browse Products
 </a>
 <ul>
 <li>
-<a href="/talentstream/sourcing-technology/broadbean-job-distribution"><span class="top-bar__link">
-Broadbean Job Distribution
+<a href="/talentstream/recruitment-software/aurico"><span class="top-bar__link">
+Aurico WebACE™
 </span>
 <br>
 <span class="top-bar__subtitle">
-Multi-job posting across networks
+Drug &amp; Background Screening
 </span>
 </a>
 </li>
@@ -226,7 +237,7 @@ Talentstream Recruit
 </span>
 <br>
 <span class="top-bar__subtitle">
-Pre-hire platform
+Applicant Tracking System
 </span>
 </a>
 </li>
@@ -307,12 +318,11 @@ For Job Seekers
 <header class="text--white home__hero" style="background-image: url(https://d30c0uivkwifa5.cloudfront.net/assets/home--video-poster-2bc367505b5ac8c3b17923ab6dea6a2cfceed898971b60e9ce8862981fe66b91.jpg);">
 <div class="home__hero__video" data-poster-mid="https://d30c0uivkwifa5.cloudfront.net/assets/home--video-poster--mid-3c4eb22ce27a2d1551c3c09451fcf8eb4cb5238907a444aff18be43f1d3058a8.jpg" data-poster="https://d30c0uivkwifa5.cloudfront.net/assets/home--video-poster-2bc367505b5ac8c3b17923ab6dea6a2cfceed898971b60e9ce8862981fe66b91.jpg" data-source-mp4-mid="https://d30c0uivkwifa5.cloudfront.net/assets/home--video-loop--mid-2e76b6a9a17fae2ec9a1c0f32ce3829a90c75b5a70cf126bc4196ab76c988010.mp4" data-source-mp4="https://d30c0uivkwifa5.cloudfront.net/assets/home--video-loop-9319c7e1e03fe9bef2a20509ead8718f0b70abc52e4ca9148b50b23d85940b6a.mp4" data-source-webm-mid="https://d30c0uivkwifa5.cloudfront.net/assets/home--video-loop--mid-51cf7b2fa6ab81d72c335599dc60ed84cd12dae62130709d091b67a30f32e9db.webm" data-source-webm="https://d30c0uivkwifa5.cloudfront.net/assets/home--video-loop-cc0c1e98bfab8539601a262091cb78ed0b090099175d60bba1a06dc34fae8d58.webm" id="background-video-wrapper"></div>
 <div class="home__hero__text container">
-<h1>
-<span class="light">Make the Right Hire.</span>
-<br>
-<span class="heavy">Right Now.</span>
+<h1 class="heavy">
+<snippet id="home__hero__headline">Find, Hire and Manage Great Talent</snippet>
 </h1>
-<p class="text--headline-2">Market leading software with the tools you need to make your recruiting faster, easier and more effective.</p>
+<p class="text--headline-2">
+<snippet id="home__hero__subheadline">Comprehensive human capital solutions software and services to make your job faster, easier and more effective.</snippet></p>
 <div class="home__hero__buttons">
 <a class="home__hero__button button button--primary track-gtm-cta" href="/recruitment-advertising/post-job-right-now">Post Jobs</a>
 <a class="home__hero__button button button--primary track-gtm-cta" href="/all-products">Browse Products</a>
@@ -320,229 +330,133 @@ For Job Seekers
 </div>
 <div class="home__hero__banner">
 <span class="wistia_embed wistia_async_ftzjj4b93h popover=true popoverContent=link">
-<img class="home__hero__banner__button--play " src="https://d30c0uivkwifa5.cloudfront.net/assets/icon--video-play-c902ba77f650c8a5337796087aee84d9dc42b8de7fb424d6e2ca9fb1c2d66928.png" alt="Icon  video play">
+<img class="home__hero__banner__button--play " alt="" src="https://d30c0uivkwifa5.cloudfront.net/assets/icon--video-play-c902ba77f650c8a5337796087aee84d9dc42b8de7fb424d6e2ca9fb1c2d66928.png">
 <span class="home__hero__banner__text">
 CareerBuilder's CEO shares how recruitment has changed over the last 20 years.
 </span>
 </span>
 </div>
 </header>
-<!-- / products row -->
-<section class="container home__products">
-<a class="home__product-block" href="http://hiring.careerbuilder.com/all-products#tab-1">
-<div class="color_strip orange"></div>
-<h3>
-<snippet id="subhero-title1__text"><span>Recruitment<br>​Advertising</span></snippet>
-</h3>
-<div>
-<snippet id="subhero-block1__text">Connect to candidates and share your employment brand through proven online and offline awareness solutions.</snippet>
-</div>
-<br>
-<span class="button button--tertiary button--small">
-View Products
-</span>
-</a>
-<a class="home__product-block" href="http://hiring.careerbuilder.com/all-products#tab-2">
-<div class="color_strip green"></div>
-<h3>
-<snippet id="subhero-title2__text"><span>Sourcing <br>Technology</span></snippet>
-</h3>
-<div>
-<snippet id="subhero-block2__text">Search 150 million-plus candidate profiles across our platform, or within your own databases.<br>​​​​​​​<br></snippet>
-</div>
-<span class="button button--tertiary button--small">
-View Products
-</span>
-</a>
-<a class="home__product-block" href="http://hiring.careerbuilder.com/all-products#tab-3">
-<div class="color_strip blue"></div>
-<h3>
-<snippet id="subhero-title3__text"><span>Recruitment &amp; Onboarding ​Software</span></snippet>
-</h3>
-<div>
-<snippet id="subhero-block3__text">Build an effective talent acquisition process that spans from sourcing to hiring and onboarding.</snippet>
-</div>
-<br>
-<span class="button button--tertiary button--small">
-View Products
-</span>
-</a>
-<a class="home__product-block omega" href="http://hiring.careerbuilder.com/all-products#tab-4">
-<div class="color_strip teal"></div>
-<h3>
-<snippet id="subhero-title4__text"><span>Recruitment <br>​Analytics</span></snippet>
-</h3>
-<div>
-<snippet id="subhero-block4__text">Use relevant data and the right tools to help set expectations, measure and succeed in your hiring efforts.</snippet>
-</div>
-<br>
-<span class="button button--tertiary button--small">
-View Products
-</span>
-</a>
-</section>
 <!-- / homepage product carousel -->
-<div class="home__background-cover">
+<div class="home__carousel__container">
 <section class="home__carousel container">
 <div class="home__carousel__header">
-<snippet id="home__product-carousel__header"><h2>Trusted by Hundreds of Thousands of Employers</h2>
-<p>Companies across the globe use CareerBuilder to help them achieve success across every phase of the candidate and employee life cycle, from sourcing to employment.</p></snippet>
+<snippet id="home__product-carousel__header"><h2>Trusted by Hundreds of Thousands of Employers<br>
+</h2></snippet>
 </div>
 <nav class="home__carousel__arrows">
-<div class="home__carousel__arrow--left fa fa-chevron-left"></div>
-<div class="home__carousel__arrow--right fa fa-chevron-right"></div>
+<div class="home__carousel__arrow home__carousel__arrow--left fa fa-chevron-left"></div>
+<div class="home__carousel__arrow home__carousel__arrow--right fa fa-chevron-right"></div>
 </nav>
 <div class="home__carousel__item-wrap" id="home__carousel">
-<a class="home__carousel__item hidden" href="/talentstream/recruitment-analytics/emsi-analytics"><div class="home__carousel__image-logo__wrap">
-<div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--emc2-4bb9fc74ee3c87b7e6493ee009204c848974f591f3ff9fb96d1c9eb21e67a428.png" alt="Home  product carousel logo  emc2">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--keybank-a3d89c2d99e68287df1de920dc2c3789f09cb435d81258a883c2a6401ce3dfd1.png" alt="Home  product carousel logo  keybank">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--nucor-0a46d40e966b27b55d18db38c5b9657208cbb3b6aafd92c221530cae203b09ae.png" alt="Home  product carousel logo  nucor">
-</div>
-<div class="home__carousel__image__wrap">
-<img class="home__carousel__image content" alt="Emsi Analytics for Talent Acquisition Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--emsi-analytics-b81644bd2925feab7a8b3da741ff2017523dce137f409c23cbcfac78e7c826ec.jpg">
-</div>
-<div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--p-and-g-76123c8341fbe0c68f5fb5b40b0460ff14ef24c6671343d01511e309b4207b59.png" alt="Home  product carousel logo  p and g">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--united-health-group-1a5bc1e4641d3173153c089ba4b61cfb64899debf1c5bf332f8fa31bffef158a.png" alt="Home  product carousel logo  united health group">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--gm-166915a09135b820f3d6f7d67cd0c4d773aeb3132be8553be12fe0dca4771436.png" alt="Home  product carousel logo  gm">
-</div>
-</div>
-<h3 class="home__carousel__item__subhead">
-Build informed recruitment strategies with
-<span class="resources__continue-link">
-Emsi Analytics for Talent Acquisition
-<i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"> ​</i>
-</span>
-</h3>
-</a><a class="home__carousel__item hidden" href="/talentstream/sourcing-technology/search"><div class="home__carousel__image-logo__wrap">
-<div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--ingram-d1bf32210031a4d5fbbb7a1d2afe4b2cebfeeda08d0519e720a2b15a988747f1.png" alt="Home  product carousel logo  ingram">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--pridgeon-and-clay-09519233291baeeb67a199515fc1c5cd72e5d099db7099688d66392d8e24cc30.png" alt="Home  product carousel logo  pridgeon and clay">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--velossent-89020de5c6ae79f343ed61107380fc9abee0638db8ae792c8d3ae18a37c9e28f.png" alt="Home  product carousel logo  velossent">
-</div>
-<div class="home__carousel__image__wrap">
-<img class="home__carousel__image content" alt="CareerBuilder Search Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--careerbuilder-search-f168e15babe79105cdfad0a76c7489e63955407ccd673b2bee54f1da1d6097bf.jpg">
-</div>
-<div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--principal-a09ce1f0ed558f1c58b1b909d28062687e781ede079bfd650f27e21bba3d0a4a.png" alt="Home  product carousel logo  principal">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--proliance-a687620024d24ec726ad38fe6f5e737d03d5540e9ecbf2bb93c7982769bec11b.png" alt="Home  product carousel logo  proliance">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--citrix-c16aa5b00ea3c93b20a9957ac32e7d2d81a9163f6946aa91457accc17e6f0577.png" alt="Home  product carousel logo  citrix">
-</div>
-</div>
-<h3 class="home__carousel__item__subhead">
+<a class="home__carousel__item hidden" href="/talentstream/sourcing-technology/search"><h3 class="home__carousel__item__subhead">
 Source from 150 million candidate profiles with
 <span class="resources__continue-link">
 CareerBuilder Search
 <i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"></i>
 </span>
 </h3>
-</a><a class="home__carousel__item hidden" href="/recruitment-advertising/post-job-right-now"><div class="home__carousel__image-logo__wrap">
+<div class="home__carousel__image-logo__wrap">
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--cc-autoplex-8fbba896104fbe9c83facefa452eee15b77f3a55067f1ab56dfd454c284a9e0c.png" alt="Home  product carousel logo  cc autoplex">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--b-s-d-a057a0cc0b733865ab75984482771b1a21f9418d221d7d7a4fd31d539153f029.png" alt="Home  product carousel logo  b s d">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--garber-ed6a5758e67bbdc5b57c199fbfe924d60a74316e8e3bb1121db3fcdcd6e1d836.png" alt="Home  product carousel logo  garber">
+<img alt="ingram" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--ingram-d1bf32210031a4d5fbbb7a1d2afe4b2cebfeeda08d0519e720a2b15a988747f1.png">
+<img alt="pridgeon-and-clay" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--pridgeon-and-clay-09519233291baeeb67a199515fc1c5cd72e5d099db7099688d66392d8e24cc30.png">
+<img alt="velossent" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--velossent-89020de5c6ae79f343ed61107380fc9abee0638db8ae792c8d3ae18a37c9e28f.png">
+</div>
+<div class="home__carousel__image__wrap">
+<img class="home__carousel__image content" alt="CareerBuilder Search Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--careerbuilder-search-f168e15babe79105cdfad0a76c7489e63955407ccd673b2bee54f1da1d6097bf.jpg">
+</div>
+<div class="home__carousel__logos">
+<img alt="principal" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--principal-a09ce1f0ed558f1c58b1b909d28062687e781ede079bfd650f27e21bba3d0a4a.png">
+<img alt="proliance" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--proliance-a687620024d24ec726ad38fe6f5e737d03d5540e9ecbf2bb93c7982769bec11b.png">
+<img alt="citrix" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--citrix-c16aa5b00ea3c93b20a9957ac32e7d2d81a9163f6946aa91457accc17e6f0577.png">
+</div>
+</div>
+</a><a class="home__carousel__item hidden" href="/recruitment-advertising/post-job-right-now"><h3 class="home__carousel__item__subhead">
+Attract relevant, qualified candidates with
+<span class="resources__continue-link">
+Job Postings
+<i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"></i>
+</span>
+</h3>
+<div class="home__carousel__image-logo__wrap">
+<div class="home__carousel__logos">
+<img alt="cc-autoplex" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--cc-autoplex-8fbba896104fbe9c83facefa452eee15b77f3a55067f1ab56dfd454c284a9e0c.png">
+<img alt="b-s-d" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--b-s-d-a057a0cc0b733865ab75984482771b1a21f9418d221d7d7a4fd31d539153f029.png">
+<img alt="garber" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--garber-ed6a5758e67bbdc5b57c199fbfe924d60a74316e8e3bb1121db3fcdcd6e1d836.png">
 </div>
 <div class="home__carousel__image__wrap">
 <img class="home__carousel__image content" alt="Job Postings Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--jobs-dfc848ea12e5c4ce779962634a8716fde3598de2bf1aeb8f9ab9ceaf38920fb6.jpg">
 </div>
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--inovar-2979bb183660b6624ea32c3af58e172119f366897c5c139fcf2aaf082019a4d9.png" alt="Home  product carousel logo  inovar">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--cielo-d7d37e78a59a0399cef963383e152227a041d8563ad5fd0847d7c7c8043351e0.png" alt="Home  product carousel logo  cielo">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--pathfinder-hh-5fe95ced052a7c46fb267ea7445d76405804c247e279f48a11655fe47df6d3c0.png" alt="Home  product carousel logo  pathfinder hh">
+<img alt="inovar" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--inovar-2979bb183660b6624ea32c3af58e172119f366897c5c139fcf2aaf082019a4d9.png">
+<img alt="cielo" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--cielo-d7d37e78a59a0399cef963383e152227a041d8563ad5fd0847d7c7c8043351e0.png">
+<img alt="pathfinder-hh" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--pathfinder-hh-5fe95ced052a7c46fb267ea7445d76405804c247e279f48a11655fe47df6d3c0.png">
 </div>
 </div>
-<h3 class="home__carousel__item__subhead">
-Attract relevant, qualified candidates with
-<span class="resources__continue-link">
-Job Postings
-<i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1">​</i>
-</span>
-</h3>
-</a><a class="home__carousel__item hidden" href="/talentstream/recruitment-software/engage"><div class="home__carousel__image-logo__wrap">
-<div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--hilton-14df7dfa813b38fdc54c59e572d281958c24794e8b571910553a709a66e9aebb.png" alt="Home  product carousel logo  hilton">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--container-store-5eb35de6ba0583c345eb7db9b413de8ea67e864f73886ccebcf45053b4141c69.png" alt="Home  product carousel logo  container store">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--the-vitamin-shoppe-9c983f9622091fde59c7770504f06bcec28246c6e0f5f7e1f916a0311685cb2f.png" alt="Home  product carousel logo  the vitamin shoppe">
-</div>
-<div class="home__carousel__image__wrap">
-<img class="home__carousel__image content" alt="Talentstream Engage Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--talentstream-engage-20aa8b2e3f8240cce1c1915938369ecb83dbd3a5b302d97e6eda9f0c826266ed.jpg">
-</div>
-<div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--cardinal-3d581806363b9f582b447fe14512bf95b2778f27177f364eceda94cd12e57ee3.png" alt="Home  product carousel logo  cardinal">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--pro-energy-f2efa558933e1befc3fa565778af7a1e82c7697b15ff180bcc6ba366ce2e6393.png" alt="Home  product carousel logo  pro energy">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--john_deere-f1851b2bba849969ab673cc90aa3bef3ca31f2ff19768f80607b35376d55d2e0.png" alt="Home  product carousel logo  john deere">
-</div>
-</div>
-<h3 class="home__carousel__item__subhead">
+</a><a class="home__carousel__item hidden" href="/talentstream/recruitment-software/engage"><h3 class="home__carousel__item__subhead">
 Strengthen the candidate experience of your career site with 
 <span class="resources__continue-link">
 Talentstream Engage
 <i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"> ​</i>
 </span>
 </h3>
-</a><a class="home__carousel__item hidden" href="/talentstream/recruitment-software/recruit"><div class="home__carousel__image-logo__wrap">
+<div class="home__carousel__image-logo__wrap">
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--ariens-32d0551ffae535c3f1a476550d243601957a7e25e79ad2fea55d308793dc0a42.png" alt="Home  product carousel logo  ariens">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--sears-1f6162663bc666d6a816327d8025b0e55b83d55120de0a27357761a8f6833450.png" alt="Home  product carousel logo  sears">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--wynn-b619debe8c59cfee70b9cd5fb764ad2c63641ae753663abad470164f80f2ea5c.png" alt="Home  product carousel logo  wynn">
+<img alt="hilton" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--hilton-14df7dfa813b38fdc54c59e572d281958c24794e8b571910553a709a66e9aebb.png">
+<img alt="container-store" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--container-store-5eb35de6ba0583c345eb7db9b413de8ea67e864f73886ccebcf45053b4141c69.png">
+<img alt="the-vitamin-shoppe" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--the-vitamin-shoppe-9c983f9622091fde59c7770504f06bcec28246c6e0f5f7e1f916a0311685cb2f.png">
 </div>
 <div class="home__carousel__image__wrap">
-<img class="home__carousel__image content" alt="Talentstream Recruit Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--talentstream-recruit-af04bfe35e7e73935c34c7586e51f392587f338ed6c17b7b074923e3c084a213.jpg">
+<img class="home__carousel__image content" alt="Talentstream Engage Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--talentstream-engage-20aa8b2e3f8240cce1c1915938369ecb83dbd3a5b302d97e6eda9f0c826266ed.jpg">
 </div>
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--rockwater-fc04f7432dfc8e5f2fd0d177a21f87fbaa1a9b5dfe5cbf39c9c8b06d79df4410.png" alt="Home  product carousel logo  rockwater">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--jmwilson-894a7416a18791f2a5a54958e56854dca9140dcc71eb72b5edd3721fbaad8218.png" alt="Home  product carousel logo  jmwilson">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--ptc-e73dfa26c5d83943d0655e06ff3c20823366b27c3b731afccede35bf87c49643.png" alt="Home  product carousel logo  ptc">
+<img alt="cardinal" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--cardinal-3d581806363b9f582b447fe14512bf95b2778f27177f364eceda94cd12e57ee3.png">
+<img alt="pro-energy" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--pro-energy-f2efa558933e1befc3fa565778af7a1e82c7697b15ff180bcc6ba366ce2e6393.png">
+<img alt="john_deere" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--john_deere-f1851b2bba849969ab673cc90aa3bef3ca31f2ff19768f80607b35376d55d2e0.png">
 </div>
 </div>
-<h3 class="home__carousel__item__subhead">
+</a><a class="home__carousel__item hidden" href="/talentstream/recruitment-software/recruit"><h3 class="home__carousel__item__subhead">
 Manage your candidate workflow and entire recruitment process with 
 <span class="resources__continue-link">
 Talentstream Recruit
 <i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"></i>
 </span>
 </h3>
-</a><a class="home__carousel__item hidden" href="/talentstream/recruitment-software/aurico"><div class="home__carousel__image-logo__wrap">
+<div class="home__carousel__image-logo__wrap">
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--enlivant-92f19ef348342d7afc7085541274898ad2fb7fd8c948bac2577eae9f321ad3cc.jpg" alt="Home  product carousel logo  enlivant">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--westmoreland-53fafa8cd1915d028a252c8b3c5137cc6ef62717a0cad2d5e5f680d0d68027e6.png" alt="Home  product carousel logo  westmoreland">
+<img alt="ariens" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--ariens-32d0551ffae535c3f1a476550d243601957a7e25e79ad2fea55d308793dc0a42.png">
+<img alt="sears" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--sears-1f6162663bc666d6a816327d8025b0e55b83d55120de0a27357761a8f6833450.png">
+<img alt="wynn" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--wynn-b619debe8c59cfee70b9cd5fb764ad2c63641ae753663abad470164f80f2ea5c.png">
 </div>
 <div class="home__carousel__image__wrap">
-<img class="home__carousel__image content" alt="Aurico Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--aurico-5e7bf7a23b34086d6b59bfe9909cf81f84d7aee5bb74b6be6ef8d34bea21073a.jpg">
+<img class="home__carousel__image content" alt="Talentstream Recruit Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--talentstream-recruit-af04bfe35e7e73935c34c7586e51f392587f338ed6c17b7b074923e3c084a213.jpg">
 </div>
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--zeigler-3986ae7a58432ad0564f64818af85e01052fd680896cbccc1fec1e2136b2da96.png" alt="Home  product carousel logo  zeigler">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--advocate-health-e4d48ed394df23446ad09fa030b1deca97bf65bb1cf5131a98e55b4fcfd1abc3.png" alt="Home  product carousel logo  advocate health">
+<img alt="rockwater" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--rockwater-fc04f7432dfc8e5f2fd0d177a21f87fbaa1a9b5dfe5cbf39c9c8b06d79df4410.png">
+<img alt="jmwilson" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--jmwilson-894a7416a18791f2a5a54958e56854dca9140dcc71eb72b5edd3721fbaad8218.png">
+<img alt="ptc" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--ptc-e73dfa26c5d83943d0655e06ff3c20823366b27c3b731afccede35bf87c49643.png">
 </div>
 </div>
-<h3 class="home__carousel__item__subhead">
+</a><a class="home__carousel__item hidden" href="/talentstream/recruitment-software/aurico"><h3 class="home__carousel__item__subhead">
 Perform background checks and screen candidates with 
 <span class="resources__continue-link">
 Aurico WebACE™
 <i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"> ​</i>
 </span>
 </h3>
-</a><a class="home__carousel__item hidden" href="/talentstream/recruitment-analytics/broadbean-analytics-suite"><div class="home__carousel__image-logo__wrap">
+<div class="home__carousel__image-logo__wrap">
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--hilton-14df7dfa813b38fdc54c59e572d281958c24794e8b571910553a709a66e9aebb.png" alt="Home  product carousel logo  hilton">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--adecco-8f68c6ce3d2e205dee024b00ed5c6400fa08f71cae510876c15d536b7fb739f9.png" alt="Home  product carousel logo  adecco">
+<img alt="enlivant" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--enlivant-92f19ef348342d7afc7085541274898ad2fb7fd8c948bac2577eae9f321ad3cc.jpg">
+<img alt="westmoreland" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--westmoreland-53fafa8cd1915d028a252c8b3c5137cc6ef62717a0cad2d5e5f680d0d68027e6.png">
 </div>
 <div class="home__carousel__image__wrap">
-<img class="home__carousel__image content" alt="Broadbean Analytics Suite Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--broadbean-analytics-585fc4aa4c513c3afc50aeb6edea9cba07f2b61dc1fa2240ed23afd7676a4bc7.jpg">
+<img class="home__carousel__image content" alt="Aurico Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--aurico-5e7bf7a23b34086d6b59bfe9909cf81f84d7aee5bb74b6be6ef8d34bea21073a.jpg">
 </div>
 <div class="home__carousel__logos">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--stryker-c0128e1c039afc1d0dc24987997fe6e49f578558a26f5d71b1fca67e9ef46248.png" alt="Home  product carousel logo  stryker">
-<img src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--adp-01a5fd0fd0435f439b43b8023edc0ca88b7ac26e55bf02546bf42b1e18aa7648.png" alt="Home  product carousel logo  adp">
+<img alt="zeigler" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--zeigler-3986ae7a58432ad0564f64818af85e01052fd680896cbccc1fec1e2136b2da96.png">
+<img alt="advocate-health" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel-logo--advocate-health-e4d48ed394df23446ad09fa030b1deca97bf65bb1cf5131a98e55b4fcfd1abc3.png">
 </div>
 </div>
-<h3 class="home__carousel__item__subhead">
-Evaluate the effectiveness of your recruitment program with
-<span class="resources__continue-link">
-Broadbean Analytics Suite
-<i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"></i>
-</span>
-</h3>
 </a>
 </div>
 <a class="home__carousel__small-screen" href="/recruitment-advertising/post-job-right-now"><img alt="Job Postings Mobile Product Image" src="https://d30c0uivkwifa5.cloudfront.net/assets/home--product-carousel--mobile-80309ea3d104b548b1011a7186767b5a4300d69008a29bfb6ba48f87d27a629b.png">
@@ -550,97 +464,162 @@ Broadbean Analytics Suite
 Attract relevant, qualified candidates with
 <span class="resources__continue-link">
 Job Postings
-<i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1">​</i>
+<i attribute="aria-hidden=true" class="fa fa-angle-double-right fa-1"></i>
 </span>
 </h3>
 </a></section>
 </div>
+<!-- / products row -->
+<div class="home__products__container">
+<section class="home__products container">
+<h2 class="home__products__headline">
+<snippet id="home__products__headline">Explore Products by Category
+</snippet>
+</h2>
+<div class="home__products__items">
+<a class="home__product-block home__product-block--candidate-marketplace" href="http://hiring.careerbuilder.com/all-products#tab-1">
+<div class="home__product-block__text">
+<h3>
+<snippet id="subhero-title1__text"><span>Recruitment<br>​Advertising</span></snippet>
+</h3>
+<p>
+<snippet id="subhero-block1__text"><font color="666666">Connect to candidates and share your employment brand through proven online and offline awareness solutions.</font></snippet></p>
+</div>
+<span class="home__product-block__button button button--tertiary button--small">View Products</span>
+</a>
+<a class="home__product-block home__product-block--sourcing-technologies" href="http://hiring.careerbuilder.com/all-products#tab-2">
+<div class="home__product-block__text">
+<h3>
+<snippet id="subhero-title2__text"><span>Sourcing <br>Technology</span></snippet>
+</h3>
+<p>
+<snippet id="subhero-block2__text"><font color="666666">Search 150 million-plus candidate profiles across our platform, or within your own databases.</font></snippet></p>
+</div>
+<span class="home__product-block__button button button--tertiary button--small">View Products</span>
+</a>
+<a class="home__product-block home__product-block--recruitment-software" href="http://hiring.careerbuilder.com/all-products#tab-3">
+<div class="home__product-block__text">
+<h3>
+<snippet id="subhero-title3__text"><span>Recruitment &amp; Onboarding ​Software</span></snippet>
+</h3>
+<p>
+<snippet id="subhero-block3__text"><font color="666666">Build an effective talent acquisition process that spans from sourcing to hiring and onboarding.</font></snippet></p>
+</div>
+<span class="home__product-block__button button button--tertiary button--small">View Products</span>
+</a>
+<a class="home__product-block home__product-block--recruitment-analytics" href="http://hiring.careerbuilder.com/all-products#tab-4">
+<div class="home__product-block__text">
+<h3>
+<snippet id="subhero-title4__text"><span>Recruitment <br>​Analytics</span></snippet>
+</h3>
+<p>
+<snippet id="subhero-block4__text"><font color="666666">Use relevant data and the right tools to help set expectations, measure and succeed in your hiring efforts.</font></snippet></p>
+</div>
+<span class="home__product-block__button button button--tertiary button--small">View Products</span>
+</a>
+</div>
+</section>
+</div>
+<!-- / demo banner -->
+<div class="home__demo-banner__container">
+<section class="home__demo-banner container">
+<div class="home__demo-banner__text">
+<p class="light">For over 20 years, CareerBuilder has put America to work, helping millions of everyday people find jobs and hundreds of thousands of employers find the talent they need to be successful.</p>
+<p class="heavy">CareerBuilder is the only end-to-end human capital management company covering the entire candidate lifecycle and employee lifecycle for businesses.</p>
+</div>
+<div class="home__demo-banner__popup inline-popups">
+<a class="button button--primary animated-popup track-gtm-bodyCTA" data-effect="mfp-zoom-in" href="#home__demo-banner__request-demo">Ready for a Demo?</a>
+<div class="popup__wrapper--iframe mfp-with-anim mfp-hide" id="home__demo-banner__request-demo">
+<iframe allowtransparency="true" frameborder="0" src="https://go.pardot.com/l/27812/2016-11-14/36ncnt" style="border: 0" type="text/html"></iframe>
+</div>
+</div>
+</section>
+</div>
 <!-- / resources -->
-<div class="home__background-cover home__resources__container container">
+<div class="home__resources__container">
 <section class="home__resources container">
 <h2 class="resources__headline">
-<snippet id="resources__header">Resources
-</snippet>
+<snippet id="resources__header">Case Studies and Resources</snippet>
 </h2>
 <p class="resources__subhead">
 <snippet id="resources__subhead">Best practices, hiring trends and customer success stories.</snippet></p>
 <nav class="resource__carousel__arrows">
-<div class="resource__carousel__arrow--left fa fa-chevron-left"></div>
-<div class="resource__carousel__arrow--right fa fa-chevron-right"></div>
+<div class="resource__carousel__arrow resource__carousel__arrow--left fa fa-chevron-left"></div>
+<div class="resource__carousel__arrow resource__carousel__arrow--right fa fa-chevron-right"></div>
 </nav>
-<div class="resource-grid">
-<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/applicant-tracking-system-implementation-questions" target="_blank">
+<div class="resource-grid" id="resource-grid">
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/unique-on-site-screening-feature-enhances-candidates-background-check-experience" target="_blank">
 <div class="resource-block__image-wrap">
-<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fthehiringsite.careerbuilder.com%2Fwp-content%2Fuploads%2F2016%2F09%2FBLOG_16_QABrettHeader_BLOG-667x380.jpg&amp;size=3&amp;version=1478883595&amp;sig=02a0ef9a74d95f5b2b92257fefa328ec&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fthehiringsite.careerbuilder.com%2fwp content%2fuploads%2f2016%2f09%2fblog 16 qabrettheader blog 667x380.jpg&amp;size=3&amp;version=1478883595&amp;sig=02a0ef9a74d95f5b2b92257fefa328ec&amp;default=hubs%2ftilebg blogs">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4OTEwN2E0MTE0ZDcuanBnJnZlcnNpb249MDAwMCZzaWc9N2I0NDZmYzMzYzBmYWZkMmUwNmU2ZGY5Mjg5NjliMWE%25253D&amp;size=3&amp;version=1485899793&amp;sig=90fc768640e9abeff552838976df42b8&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=https%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4otewn2e0mte0zdcuanbnjnzlcnnpb249mdawmczzawc9n2i0ndzmyzmzyzbmywzkmmuwnmu2zgy5mjg5njlimwe%25253d&amp;size=3&amp;version=1485899793&amp;sig=90fc768640e9abeff552838976df42b8&amp;default=hubs%2ftilebg blogs">
 </div>
 <div class="resource-block__text-wrap">
 <h3 class="resource-block__headline">
-Applicant Tracking System: Setting the Right Implementation Expectations
+Kiosk for Aurico: On-Site Screening No One Else Offers
 </h3>
 <p class="resource-block__text">
 <span class="resources__continue-link">Continue reading...</span>
 </p>
 </div>
 </a>
-<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/how-to-stay-ahead-of-salary-trends-in-your-industry" target="_blank">
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/a-disruptive-recruiting-partnership-hire-with-speed-and-confidence" target="_blank">
 <div class="resource-block__image-wrap">
-<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fthehiringsite.careerbuilder.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fsalary-trends-part-3-e1464106548410-667x375.jpg&amp;size=3&amp;version=1475096270&amp;sig=269ab397beeb746beb3b0514e816454b&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fthehiringsite.careerbuilder.com%2fwp content%2fuploads%2f2016%2f05%2fsalary trends part 3 e1464106548410 667x375.jpg&amp;size=3&amp;version=1475096270&amp;sig=269ab397beeb746beb3b0514e816454b&amp;default=hubs%2ftilebg blogs">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4OGExOGZlMzBmNWQuanBnJnZlcnNpb249MDAwMCZzaWc9MzM1ODQ0OTQzMDY3ODVmNmUxYmZlYTVkZjNjZDg4YTI%25253D&amp;size=3&amp;version=1485445440&amp;sig=7ba7230a24717c1651d8023dac7253e7&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=https%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4ogexogzlmzbmnwquanbnjnzlcnnpb249mdawmczzawc9mzm1odq0otqzmdy3odvmnmuxymzlytvkzjnjzdg4yti%25253d&amp;size=3&amp;version=1485445440&amp;sig=7ba7230a24717c1651d8023dac7253e7&amp;default=hubs%2ftilebg blogs">
 </div>
 <div class="resource-block__text-wrap">
 <h3 class="resource-block__headline">
-How to Stay Ahead of Salary Trends in Your Industry
+How to Build a Pipeline of Job-Ready Candidates
 </h3>
 <p class="resource-block__text">
 <span class="resources__continue-link">Continue reading...</span>
 </p>
 </div>
 </a>
-<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/careerbuilder-acquires-workterra" target="_blank">
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/5-new-features-of-emsi-analytics-for-talent-acquisition" target="_blank">
 <div class="resource-block__image-wrap">
-<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fthehiringsite.careerbuilder.com%2Fwp-content%2Fuploads%2F2016%2F09%2FWorkterra-e1473177179788.jpg&amp;size=3&amp;version=1478631080&amp;sig=666e154df8106e3a3700750ddb93321a&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fthehiringsite.careerbuilder.com%2fwp content%2fuploads%2f2016%2f09%2fworkterra e1473177179788.jpg&amp;size=3&amp;version=1478631080&amp;sig=666e154df8106e3a3700750ddb93321a&amp;default=hubs%2ftilebg blogs">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4OGI5MDAwMDE2NzAucG5nJnZlcnNpb249MDAwMCZzaWc9OTVlMzhmYTU5NTQ5Mjg0NWE3YTBjMmNjMTBjYmZkY2M%25253D&amp;size=3&amp;version=1485796523&amp;sig=c48c09ff7a5bcb31a3be3de9cf8c0783&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=https%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4ogi5mdawmde2nzaucg5njnzlcnnpb249mdawmczzawc9otvlmzhmytu5ntq5mjg0nwe3ytbjmmnjmtbjymzky2m%25253d&amp;size=3&amp;version=1485796523&amp;sig=c48c09ff7a5bcb31a3be3de9cf8c0783&amp;default=hubs%2ftilebg blogs">
 </div>
 <div class="resource-block__text-wrap">
 <h3 class="resource-block__headline">
-CareerBuilder Expands Into Post-Hire Software with the Acquisition of WORKTERRA
+5 New Features of Emsi Analytics for Talent Acquisition 
 </h3>
 <p class="resource-block__text">
 <span class="resources__continue-link">Continue reading...</span>
 </p>
 </div>
 </a>
-<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/automate-your-recruitment-process" target="_blank">
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/semantic-search-technology" target="_blank">
 <div class="resource-block__image-wrap">
-<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU3ZmQ2N2Y0OTE5MjkuanBnJnZlcnNpb249MDAwMCZzaWc9OTM0YWZlMGE1M2IzOWU4Njc4NDQxNmUwMDcyYmYzN2I%25253D&amp;size=3&amp;version=1478884213&amp;sig=8c3f9d75dc8f4bc2335776dc044321ff&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu3zmq2n2y0ote5mjkuanbnjnzlcnnpb249mdawmczzawc9otm0ywzlmge1m2izowu4njc4ndqxnmuwmdcyymyzn2i%25253d&amp;size=3&amp;version=1478884213&amp;sig=8c3f9d75dc8f4bc2335776dc044321ff&amp;default=hubs%2ftilebg blogs">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4NzU0Y2NlOGNhZWUuanBnJnZlcnNpb249MDAwMCZzaWc9MTliZmEzYTMzMDBmNzFlYjJjZjZlOTA4ZWQwNmI2MDE%25253D&amp;size=3&amp;version=1485373378&amp;sig=859bec2acc962392b45a2656d5d08f34&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4nzu0y2nlognhzwuuanbnjnzlcnnpb249mdawmczzawc9mtlizmezytmzmdbmnzflyjjjzjzlota4zwqwnmi2mde%25253d&amp;size=3&amp;version=1485373378&amp;sig=859bec2acc962392b45a2656d5d08f34&amp;default=hubs%2ftilebg blogs">
 </div>
 <div class="resource-block__text-wrap">
 <h3 class="resource-block__headline">
-How to Automate Your Recruitment Process
+Resume Database Now Enhanced with Semantic Search Technology 
 </h3>
 <p class="resource-block__text">
 <span class="resources__continue-link">Continue reading...</span>
 </p>
 </div>
 </a>
-<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/careerbuilder-rewrites-its-job-description" target="_blank">
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/how-to-rethink-the-candidate-experience-and-make-better-hires-3" target="_blank">
 <div class="resource-block__image-wrap">
-<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU3ODU1NDg2NjBiNmMuanBnJnZlcnNpb249MDAwMCZzaWc9NDFjODNjMmUxMmJlNzA1Y2QyZDg0MWI0OTg0YmFkYTU%25253D&amp;size=3&amp;version=1475096660&amp;sig=bafd04897e45a0bf9903845d38fd52f4&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=https%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu3odu1ndg2njbinmmuanbnjnzlcnnpb249mdawmczzawc9ndfjodnjmmuxmmjlnza1y2qyzdg0mwi0otg0ymfkytu%25253d&amp;size=3&amp;version=1475096660&amp;sig=bafd04897e45a0bf9903845d38fd52f4&amp;default=hubs%2ftilebg blogs">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fimage.slidesharecdn.com%2F2016candidatebehaviorguide-160630133600%2F95%2Fslide-1-1024.jpg%3Fcb%3D1467295300&amp;size=3&amp;version=1483557554&amp;sig=9b425ef5d4dd194030c3e663ac8cfce8&amp;default=hubs%2Ftilebg-docs.jpg" alt="Mediaproxy?url=http%3a%2f%2fimage.slidesharecdn.com%2f2016candidatebehaviorguide 160630133600%2f95%2fslide 1 1024.jpg%3fcb%3d1467295300&amp;size=3&amp;version=1483557554&amp;sig=9b425ef5d4dd194030c3e663ac8cfce8&amp;default=hubs%2ftilebg docs">
 </div>
 <div class="resource-block__text-wrap">
 <h3 class="resource-block__headline">
-CareerBuilder Rewrites Its Job Description
+How to Rethink the Candidate Experience and Make Better Hires
 </h3>
 <p class="resource-block__text">
 <span class="resources__continue-link">Continue reading...</span>
 </p>
 </div>
 </a>
-<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/powerful-job-posting-infographic" target="_blank">
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/we-re-creating-a-more-user-friendly-careerbuilder-experience" target="_blank">
 <div class="resource-block__image-wrap">
-<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fhiring.careerbuilder.com%2Fassets%2Fresources--powerful-job-posting-8205e682ecb9df1b8238eee5bdb7a906b4da23e6b1ce54f487f00ba27ab5f244.png&amp;size=3&amp;version=1475591505&amp;sig=b6e0604d2e7c00115224e00f3518bde9&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fhiring.careerbuilder.com%2fassets%2fresources  powerful job posting 8205e682ecb9df1b8238eee5bdb7a906b4da23e6b1ce54f487f00ba27ab5f244.png&amp;size=3&amp;version=1475591505&amp;sig=b6e0604d2e7c00115224e00f3518bde9&amp;default=hubs%2ftilebg blogs">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4ODExMTE1MDIzMDUuSlBHJnZlcnNpb249MDAwMCZzaWc9NmRhYzg2YTdhMzA5OGQwNjRiNzg2YTBmMTgzMmVmNzc%25253D&amp;size=3&amp;version=1484853710&amp;sig=fb0ccffd8b15219e1ef1ba051dbe312a&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=https%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4odexmte1mdizmduuslbhjnzlcnnpb249mdawmczzawc9nmrhyzg2ytdhmza5ogqwnjrinzg2ytbmmtgzmmvmnzc%25253d&amp;size=3&amp;version=1484853710&amp;sig=fb0ccffd8b15219e1ef1ba051dbe312a&amp;default=hubs%2ftilebg blogs">
 </div>
 <div class="resource-block__text-wrap">
 <h3 class="resource-block__headline">
-Infographic: The Anatomy of a Powerful Job Posting
+We’re Creating a More User-Friendly CareerBuilder Experience
 </h3>
 <p class="resource-block__text">
 <span class="resources__continue-link">Continue reading...</span>
@@ -649,19 +628,6 @@ Infographic: The Anatomy of a Powerful Job Posting
 </a>
 </div>
 <snippet id="resources__link"><a class="resources__text resources__link" data-cke-saved-href="http://resources.careerbuilder.com/h/" href="http://resources.careerbuilder.com/h/" target="_self">Get more HR best practices and recruiting resources from CareerBuilder's Resource Center for Employers &gt;&gt;</a></snippet></section>
-</div>
-<!-- / wistia video -->
-<div class="home__background-cover home__video">
-<div class="home__background-overlay-all home__background-overlay--blue"></div>
-<span class="wistia_embed wistia_async_ftzjj4b93h popover=true popoverContent=link">
-<section class="container text--white home__video__text text--headline-1">
-<p class="light">For 20 years, CareerBuilder has been the reliable choice. Stable. The buddy you count on in a bind. Now, we’re that and so much more.</p>
-<p class="heavy">End to end, acquire to hire, we’ve got your back.</p>
-<a class="video-play-button">
-<img class="home__video__button--play" src="https://d30c0uivkwifa5.cloudfront.net/assets/icon--video-play-c902ba77f650c8a5337796087aee84d9dc42b8de7fb424d6e2ca9fb1c2d66928.png" alt="Icon  video play">
-</a>
-</section>
-</span>
 </div>
 
 <!-- global footer -->
@@ -706,7 +672,7 @@ Sign Up for the Latest Recruitment News, Tips and Advice
 <a href="/company/security-and-privacy">Security &amp; Privacy</a>
 </li>
 <li>
-<a href="/company/advertise">Advertise With Us</a>
+<a href="/recruitment-advertising/display-advertising">Advertise With Us</a>
 </li>
 <li>
 <a href="/company/partners-and-affiliates">Partners &amp; Affiliates</a>
@@ -770,7 +736,7 @@ About Us:
 <div class="footer__branding">
 <img alt="CareerBuilder logo" class="footer__logo" src="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--white-d7fc2f46b075f9145b489ecc6d4a8079f2b1010be22dbf31a48709536dfdf0af.svg">
 <p class="footer__copyright">
-©2016
+©2017
 CareerBuilder, LLC. All rights reserved.
 <br>
 200 N. LaSalle Street, Chicago, IL
@@ -783,18 +749,23 @@ CareerBuilder, LLC. All rights reserved.
 <script src="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-a3bf45560c9608923cde3bd51fcbdd5957eb09b7fe8494d529ca857335c3a879.js"></script>
 <script>
 //<![CDATA[
-window.gon={};gon.env="production";gon.first_time_popup=true;gon.careerbuilder={"environment_url_prefix":"","auth":{"client_id":"C14816ab4","authenticated":null,"user_email":null}};
+window.gon={};gon.env="production";gon.first_time_popup=true;gon.careerbuilder={"environment_url_prefix":"","auth":{"client_id":"C14816ab4","authenticated":null,"initial_login":null,"user_email":null}};
 //]]>
 </script>
 <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','//connect.facebook.net/en_US/fbevents.js');
+  if(typeof fbq === 'undefined') {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
   
-  fbq('init', '575283812576156');
-  fbq('track', "PageView");
+    fbq('init', '575283812576156');
+    fbq('track', 'PageView');
+  }
+  else {
+    fbq('track', '{{fBPixelType}}');
+  }
 </script>
 <noscript>
 <img height="1" src="https://www.facebook.com/tr?id=575283812576156&amp;ev=PageView&amp;noscript=1" style="display:none" width="1">
@@ -933,8 +904,6 @@ window.gon={};gon.env="production";gon.first_time_popup=true;gon.careerbuilder={
 <script src="//fast.wistia.com/embed/medias/mqvbqj7pw3.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 
 
-<script async="async" src="//my.hellobar.com/a50470daa8141ebda5d428de66b7fbdffdb45be3.js" type="text/javascript"></script>
-
 <script>
   // Adroll
   adroll_adv_id = '3IYDMPEVIZGNXGLH6FT3NR';
@@ -956,6 +925,6 @@ window.gon={};gon.env="production";gon.first_time_popup=true;gon.careerbuilder={
   else {window.attachEvent('onload', _onload)}
 </script>
 
-<script src="https://d30c0uivkwifa5.cloudfront.net/assets/application-2f2bbb77216515a3a0ab202019ee94a15ea2b4f1cabf84fb4593c85994ff7a2c.js" data-turbolinks-eval="false"></script>
+<script src="https://d30c0uivkwifa5.cloudfront.net/assets/application-e658ea0f34bb4bbc08c6345793cfa8aa924b38afa379d42692d4c7b8865dd746.js" data-turbolinks-eval="false"></script>
 </body>
 </html>

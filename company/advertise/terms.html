@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+  // <![CDATA[
+  window.DY = window.DY || {};
+  DY.recommendationContext = {
+    type: '',
+    data: ['']
+  };
+  // ]]
+</script>
+<script src="//cdn.dynamicyield.com/api/8767499/api_dynamic.js" type="text/javascript"></script>
+<script src="//cdn.dynamicyield.com/api/8767499/api_static.js" type="text/javascript"></script>
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta charset="utf-8">
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtUVxMPXEULXVYWSlVVXV8PAw==","queueTime":0,"applicationTime":23,"agent":""}</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtUVxMPXEULXVYWSlVVXV8PAw==","queueTime":0,"applicationTime":29,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
 <!-- Responsive/Mobile Content Controls -->
 <meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0" name="viewport">
 <meta content="Business terms for employers who advertise with CareerBuilder" name="description">
@@ -57,13 +68,13 @@
 </script>
 
 <link href="https://hiring.careerbuilder.com/company/advertise/terms" rel="canonical">
-<link rel="shortcut icon" type="image/x-icon" href="https://d30c0uivkwifa5.cloudfront.net/assets/favicon-11a54e483811b662a28fdd298546c2c1b9c4048663fe08565d795c2a44d51a2d.ico">
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-9731fd0bc0ffd3ce165b066f9fe65e7f58f804b5fa582e8537bc2794b1fb932f.css">
+<link rel="shortcut icon" type="image/x-icon" href="https://d30c0uivkwifa5.cloudfront.net/assets/icons/favicon-11a54e483811b662a28fdd298546c2c1b9c4048663fe08565d795c2a44d51a2d.ico">
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-ee75a24420759ca8391620b3d67897d7c8577783836747a5df6f7461b443ae3b.css">
 <!--[if IE 9]>
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie9-9512071f47a86075df1220015ac2094ecf1dd6ad880eab18305a50511dcd41b7.css" />
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie9-88297770eef107777a3623e3af91c010323483bee20ddd14e6ea02921ccb8c5d.css" />
 <![endif]-->
 <!--[if lte IE 8]>
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-ded79f97f31bd08e731a94dce56297d4398b86e3c6690165027fba93d013835b.css" />
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-3ef1c609d1c6166cb53ee2ab96baaa7619fe512f4d1ad41e0c7c94287fb4d530.css" />
 <![endif]-->
 </head>
 <body class="employer-scope  marketing reading terms">
@@ -191,12 +202,12 @@ Browse Products
 </a>
 <ul>
 <li>
-<a href="/talentstream/sourcing-technology/broadbean-job-distribution"><span class="top-bar__link">
-Broadbean Job Distribution
+<a href="/talentstream/recruitment-software/aurico"><span class="top-bar__link">
+Aurico WebACE™
 </span>
 <br>
 <span class="top-bar__subtitle">
-Multi-job posting across networks
+Drug &amp; Background Screening
 </span>
 </a>
 </li>
@@ -226,7 +237,7 @@ Talentstream Recruit
 </span>
 <br>
 <span class="top-bar__subtitle">
-Pre-hire platform
+Applicant Tracking System
 </span>
 </a>
 </li>
@@ -309,55 +320,38 @@ For Job Seekers
 <header class="header header--medium ">
 <div class="header__wrapper">
 <div class="container">
-<snippet id="reading--header"><!--{cke_protected}{C}%3C!%2D%2D%20header_medium%20%2D%2D%3E--><!--{cke_protected}{C}%3C!%2D%2D%20header__headline%20%2D%2D%3E--><h1 class="header__headline text--headline text--white">Advertising Terms and Conditions</h1></snippet>
+<snippet id="reading--header"><!--{cke_protected}{C}%3C!%2D%2D%20header_medium%20%2D%2D%3E--><!--{cke_protected}{C}%3C!%2D%2D%20header__headline%20%2D%2D%3E--><h1 class="header__headline text--headline text--white">CB Media Terms and Conditions<br>
+</h1></snippet>
 </div>
 </div>
-
 </header>
 
 <div class="container reading-wrapper">
 <div class="reading-content-box">
-<snippet id="reading--body"><div class="panel-pane pane-entity-field pane-node-body"><div class="pane-content"><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even">
-<h2>Business Terms<br><br>
-</h2>
-<ol>
-<li>
-<strong>Term.</strong> This Agreement is made effective on the Effective Date specified on page one of this Agreement. Services provided hereunder shall begin on the date the services are implemented and shall continue for the period specified on page one of this Agreement (the "Term") unless earlier terminated pursuant to this Agreement. Either party shall have the right to terminate this Agreement at any time and for any reason upon two (2) business days prior written notice to the other party. In accordance with the provisions above, Customer understands and agrees that CareerBuilder sells advertising space through an auction process and that this Agreement may be terminated upon two (2) business days prior written notice if CareerBuilder receives a higher bid than that offered by Customer for the advertising space described on page one of this Agreement.<br><br>
-</li>
-<li>
-<strong>Advertising.</strong> In an advertising campaign, CareerBuilder arranges the media schedule while Customer provides advertising creative suitable to the advertising specs provided to be used for a particular campaign. As part of its advertising services, CareerBuilder offers advertising reports, including impression summaries. "Impressions" are measures of the number of times a banner is displayed. A one-month run date is defined as the period from 12 midnight on the first day of the calendar month to 12 midnight on the last day of that calendar month. Actual impressions for any given month may vary.<br><br>
-</li>
-<li>
-<strong>Advertising Billing.</strong> Customer will be billed for advertising services following each monthly period CareerBuilder runs Customer's advertising. Payments will be based on actual advertisements delivered in accordance with this agreement. In the case of under delivery CareerBuilder will roll advertising into the next calendar month. All payment obligations hereunder shall survive termination or expiration of this Agreement.<br><br>
-</li>
-<li>
-<strong>Payments.</strong> All charges for services provided by CareerBuilder are due within thirty (30) days of receipt of the CareerBuilder invoice ("Due Date"). Any amount not paid in full by the Due Date will be considered overdue and incur overdue interest of 1.5% per month.<br><br>
-</li>
-<li>
-<strong>Customer Service.</strong> CareerBuilder provides immediate customer assistance via its Help and Frequently Asked Questions features (both available on the careerbuilder.com web site). Customer Service and Tech Support Representatives are also available by telephone (770) 349-2937 or email <a data-cke-saved-href="mailto:customercare@careerbuilder.com" href="mailto:customercare@careerbuilder.com" pardotclicktrack="true">customercare@careerbuilder.com</a>.<br><br>
-</li>
-<li>
-<strong>Customer Content.</strong> Customer retains full ownership of its creative work and account data including company information and policies, job postings, and resumes. Customer is solely responsible for the accuracy of this information, and CareerBuilder will refer any inquiries regarding such information to Customer.<br><br>
-</li>
-<li>
-<strong>Approval.</strong> All advertisements are subject to CareerBuilder’s approval. CareerBuilder may edit, revise, reject, take down, or cancel any advertisement at any time. CareerBuilder will notify Customer of any such action and Customer shall be allowed to replace such advertising with acceptable advertising within five (5) days of receipt of the notice.<br><br>
-</li>
-<li>
-<strong>Representation and Warranty.</strong> Customer represents and warrants that all advertisements it provides to CareerBuilder pursuant to this Agreement: (i) will comply with applicable laws, rules, and regulations, industry codes, and (ii) will not contain any matter that may be defamatory, would expose CareerBuilder to potential liability, or would violate any third-party right including intellectual property rights. If any advertisement gives rise to any third-party claim, CareerBuilder, in addition to any other rights or remedies that may be available, may refuse to display such advertisement.<br><br>
-</li>
-<li>
-<strong>Indemnification.</strong> Customer agrees to defend, indemnify and hold harmless CareerBuilder, its officers, directors, affiliates, agents and employees, for any third-party claims, including but not limited to damages, liabilities, losses, costs and attorney’s fees and legal expenses, arising out of any breach of the representations and warranties made in Paragraph 8 of these Business Terms.<br><br>
-</li>
-<li>
-<strong>Limitation of Liability.</strong> In no event shall either party (or any of their respective officers, directors, shareholders, employees, affiliates or agents) be liable for any non-direct damages whatsoever (including, without limitation, incidental and consequential damages, lost profits or business interruption) whether based on warranty, contract, tort or any other legal theory, and whether or not the relevant party is advised of the possibility of such damages.<br><br>
-</li>
-<li>
-<strong>System Requirements.</strong> For the CareerBuilder Network to function appropriately, Customer should ensure that its system meets the minimum technical requirements, which can be found in the Customer Help section of the logon page (<a data-cke-saved-href="http://www.careerbuilder.com" href="http://www.careerbuilder.com" pardotclicktrack="true">www.careerbuilder.com</a>).<br><br>
-</li>
-<li>
-<strong>3rd Party Ad Server.</strong> Both parties agree that CareerBuilder's advertising service (“Advertising Service”) shall be the official measure of traffic delivery to Company. Company agrees to pay CareerBuilder in accordance w/ the measurement provided by Advertising Service. Any failure to pay CareerBuilder in accordance with the measurements provided by Advertising Service will be a breach of this agreement, collections and legal remedies will be pursued.</li>
-</ol>
-</div></div></div></div></div></snippet>
+<snippet id="reading--body">The following additional terms shall apply to Company’s use of the CB Media Services:<br><br><ol><li>
+<strong>Term.</strong> Either party shall have the right to terminate the portion of the Order Form that pertains to CB Media Services at any time and for any reason upon two (2) business day’s prior written notice to the other party. In accordance with the provisions above, Company understands and agrees that CareerBuilder sells advertising space through an auction process and that the portion of the Order Form that pertains to CB Media Services may be terminated upon two (2) business days prior written notice if CareerBuilder receives a higher bid than that offered by Company for the advertising space described on the Order Form.</li></ol>
+<p style="margin-left:.5in;"><br></p>
+<ol><li value="2">
+<strong>Advertising.</strong> Except as expressly provided in the Order Form, the positioning of all advertisements is within the sole discretion of CareerBuilder. CareerBuilder may run advertisements on any website owned by CareerBuilder unless otherwise stated in this Order Form. In an advertising campaign, CareerBuilder arranges the media schedule while Company provides advertising creative suitable to the advertising specs provided to be used for a particular campaign. As part of its advertising services, CareerBuilder offers advertising reports, including impression summaries. "Impressions" are measures of the number of times a banner is displayed. A one-month run date is defined as the period from 12 midnight on the first day of the calendar month to 12 midnight on the last day of that calendar month. Actual impressions for any given month may vary. Unless, otherwise specified in the Order Form, CareerBuilder is authorized to (i) continue the advertising campaign beyond the Order Form’s End Date for the sole purpose of providing the above agreed upon quantity of banner impressions; and (ii) over-serve banner impressions up to, but not exceeding, ten percent (10%) of the contractually agreed upon quantity.</li></ol>
+<p style="margin-left:.5in;"><br></p>
+<ol><li value="3">
+<strong>Billing, Payment and Credit.</strong> Company will be billed for advertising services following each monthly period CareerBuilder runs Company's advertisements. Payments will be based on actual advertisements delivered in accordance with this Order Form. In the case of under delivery CareerBuilder will roll advertising into the next calendar month. All payment obligations hereunder shall survive termination or expiration of this Order Form. CareerBuilder may, but is not obligated, to extend credit or to continue to extend credit to any Company and may change any credit limit at any time in its sole discretion. CareerBuilder shall not be obligated to deliver any ads in excess of any credit limit granted.</li></ol>
+<p style="margin-left:.5in;"><br></p>
+<ol><li value="4">
+<strong>No Assignment or Resale of Ad Space.</strong> Company may not resell, assign or transfer any of its rights hereunder. In the event of any attempt to resell, assign or transfer any of such rights, CareerBuilder may immediately terminate this Order Form, without liability to CareerBuilder.</li></ol>
+<p style="margin-left:.5in;"><br></p>
+<ol><li value="5">
+<strong>Approval.</strong> All advertisements are subject to CareerBuilder’s approval. CareerBuilder may edit, revise, reject, take down, or cancel any advertisement at any time. CareerBuilder will notify Company of any such action and Company shall be allowed to replace such advertising with acceptable advertising within five (5) days of receipt of the notice. In addition, CareerBuilder (i) may, in its sole discretion, reject any URL link embodied within any advertisement and (ii) reserves the right to reject or terminate the display of an advertisement if it fails to conform to applicable laws and regulations, CareerBuilder's policies, or the public interest. CareerBuilder may reject or remove an advertisement for an advertised site which is not functional or which CareerBuilder deems unsuitable for linking to its Site. CareerBuilder does not accept any ads that spawn pop-ups. CareerBuilder reserves the right to refuse any rich media type and that will require in excess of two days to ensure Site compatibility. Advertisements must comply with CareerBuilder’s Advertising Policies (located at https://hiring.careerbuilder.com/company/advertise/policies) and its Creative Specifications (located at http://www.careerbuilder.com/jobseeker/info/creativespecifications.aspx).</li></ol>
+<p style="margin-left:.5in;"><br></p>
+<ol><li value="6">
+<strong>Display Ads, Measurement of Traffic.</strong> In the event that Company is purchasing display ads, unless otherwise specified in this Order Form, the parties agree that CareerBuilder's advertising service (“Advertising Service”) shall be the official measure of traffic delivery to Company. Company agrees to pay CareerBuilder in accordance w/ the measurement provided by Advertising Service. Any failure to pay CareerBuilder in accordance with the measurements provided by Advertising Service will be a breach of this Order Form, collections and legal remedies will be pursued.</li></ol>
+<p style="margin-left:.5in;"><br></p>
+<ol><li value="7">
+<strong>Modification and Operation of the CareerBuilder Network.</strong> CareerBuilder reserves the right to redesign or modify the CareerBuilder Network (i.e., careerbuilder.com, any other websites owned or controlled by CareerBuilder and any pages therein) at its discretion at any time. To the extent that such modifications materially and adversely affect the placement of one or more of the advertisements, CareerBuilder shall, at its sole discretion, make a commercially reasonable effort to display future affected advertisements in a comparable location and manner.<br>
+</li></ol>
+<p style="margin-left:.5in;"><br></p>
+<ol><li value="8">
+<strong>Email Campaigns.</strong> If Company is participating in our Email campaign program, then Company agrees to abide by the Advertising Policies and Creative Specifications and submission deadlines. Further all of Company’s rights and obligations described above with respect to “advertisements” shall apply equally to Company-provided email content.</li></ol></snippet>
 </div>
 </div>
 
@@ -403,7 +397,7 @@ Sign Up for the Latest Recruitment News, Tips and Advice
 <a href="/company/security-and-privacy">Security &amp; Privacy</a>
 </li>
 <li>
-<a href="/company/advertise">Advertise With Us</a>
+<a href="/recruitment-advertising/display-advertising">Advertise With Us</a>
 </li>
 <li>
 <a href="/company/partners-and-affiliates">Partners &amp; Affiliates</a>
@@ -467,7 +461,7 @@ About Us:
 <div class="footer__branding">
 <img alt="CareerBuilder logo" class="footer__logo" src="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--white-d7fc2f46b075f9145b489ecc6d4a8079f2b1010be22dbf31a48709536dfdf0af.svg">
 <p class="footer__copyright">
-©2016
+©2017
 CareerBuilder, LLC. All rights reserved.
 <br>
 200 N. LaSalle Street, Chicago, IL
@@ -480,18 +474,23 @@ CareerBuilder, LLC. All rights reserved.
 <script src="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-a3bf45560c9608923cde3bd51fcbdd5957eb09b7fe8494d529ca857335c3a879.js"></script>
 <script>
 //<![CDATA[
-window.gon={};gon.env="production";gon.first_time_popup=false;gon.careerbuilder={"environment_url_prefix":"","auth":{"client_id":"C14816ab4","authenticated":null,"user_email":null}};
+window.gon={};gon.env="production";gon.first_time_popup=false;gon.careerbuilder={"environment_url_prefix":"","auth":{"client_id":"C14816ab4","authenticated":null,"initial_login":null,"user_email":null}};
 //]]>
 </script>
 <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','//connect.facebook.net/en_US/fbevents.js');
+  if(typeof fbq === 'undefined') {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
   
-  fbq('init', '575283812576156');
-  fbq('track', "PageView");
+    fbq('init', '575283812576156');
+    fbq('track', 'PageView');
+  }
+  else {
+    fbq('track', '{{fBPixelType}}');
+  }
 </script>
 <noscript>
 <img height="1" src="https://www.facebook.com/tr?id=575283812576156&amp;ev=PageView&amp;noscript=1" style="display:none" width="1">
@@ -630,8 +629,6 @@ window.gon={};gon.env="production";gon.first_time_popup=false;gon.careerbuilder=
 <script src="//fast.wistia.com/embed/medias/mqvbqj7pw3.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 
 
-<script async="async" src="//my.hellobar.com/a50470daa8141ebda5d428de66b7fbdffdb45be3.js" type="text/javascript"></script>
-
 <script>
   // Adroll
   adroll_adv_id = '3IYDMPEVIZGNXGLH6FT3NR';
@@ -653,6 +650,6 @@ window.gon={};gon.env="production";gon.first_time_popup=false;gon.careerbuilder=
   else {window.attachEvent('onload', _onload)}
 </script>
 
-<script src="https://d30c0uivkwifa5.cloudfront.net/assets/application-2f2bbb77216515a3a0ab202019ee94a15ea2b4f1cabf84fb4593c85994ff7a2c.js" data-turbolinks-eval="false"></script>
+<script src="https://d30c0uivkwifa5.cloudfront.net/assets/application-e658ea0f34bb4bbc08c6345793cfa8aa924b38afa379d42692d4c7b8865dd746.js" data-turbolinks-eval="false"></script>
 </body>
 </html>
