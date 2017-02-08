@@ -6,7 +6,7 @@
   // <![CDATA[
   window.DY = window.DY || {};
   DY.recommendationContext = {
-    type: 'OTHER',
+    type: '',
     data: ['']
   };
   // ]]
@@ -15,16 +15,16 @@
 <script src="//cdn.dynamicyield.com/api/8767499/api_static.js" type="text/javascript"></script>
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta charset="utf-8">
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtUVxMPXEULXVYWSlVVXV8PAw==","queueTime":0,"applicationTime":23,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtJRA4ATFIWHFBJS29EVkQVBVU=","queueTime":0,"applicationTime":640,"agent":""}</script>
 <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
 <!-- Responsive/Mobile Content Controls -->
 <meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0" name="viewport">
-<meta content="Find out how to make your recruiting easier, more effective and more cost effective with recruitment tools from CareerBuilder. Security And Privacy | CareerBuilder for Employers." name="description">
+<meta content="Find out how to make your recruiting easier, more effective and more cost effective with recruitment tools from CareerBuilder. Epwhg | CareerBuilder for Employers." name="description">
 <meta content="" name="keywords">
 <!-- Social media meta tags -->
-<meta content="https://hiring.careerbuilder.com/company/security-and-privacy" property="og:url">
+<meta content="https://hiring.careerbuilder.com/portal/EPWHG" property="og:url">
 <meta content="website" property="og:type">
-<meta content="Security And Privacy | CareerBuilder for Employers" property="og:title">
+<meta content="Epwhg | CareerBuilder for Employers" property="og:title">
 <meta content="Find out how to make your recruiting easier, more effective and more cost effective with recruitment tools from CareerBuilder." property="og:description">
 <meta content="CareerBuilder for Employers" property="og:site_name">
 <meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-fb-343746de63630b09e751bfce7e8eea8d0f8964ffd1939a9bb7203fbde7ac2388.png" property="og:image">
@@ -35,7 +35,7 @@
 <meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-tw-289a96011e331add103a5fde29314473bfabade6e44db36f51efa700e0ffa073.png" name="twitter:image">
 <meta content="CareerBuilder logomark" name="twitter:image:alt">
 <meta content="4VVGz5NZohp3_6vBXlv5_Z2lQTMz6XdevQ_NVEV5Ke8" name="google-site-verification">
-<title>Security And Privacy | CareerBuilder for Employers</title>
+<title>Epwhg | CareerBuilder for Employers</title>
 <script type="application/ld+json">
   {
     "@type": "Company",
@@ -56,8 +56,8 @@
     }],
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://hiring.careerbuilder.com/search?q=Security And Privacy",
-      "query-input": "required name=security_and_privacy"
+      "target": "https://hiring.careerbuilder.com/search?q=Epwhg",
+      "query-input": "required name=epwhg"
     }
     "sameAs" : [
       "https://www.facebook.com/cbforemployers",
@@ -67,7 +67,7 @@
   }
 </script>
 
-<link href="https://hiring.careerbuilder.com/company/security-and-privacy" rel="canonical">
+<link href="https://hiring.careerbuilder.com/portal/EPWHG" rel="canonical">
 <link rel="shortcut icon" type="image/x-icon" href="https://d30c0uivkwifa5.cloudfront.net/assets/icons/favicon-11a54e483811b662a28fdd298546c2c1b9c4048663fe08565d795c2a44d51a2d.ico">
 <link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-346d077817f4ff5b0e8aaa69c37108e95eeea94577403e4479d420dff1bd1b93.css">
 <!--[if IE 9]>
@@ -77,7 +77,7 @@
 <link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-3f9c617cfb8c3aaff2cd23939b5a005ee00193d04b42f1cb0cfc2e82c205da02.css" />
 <![endif]-->
 </head>
-<body class="employer-scope  marketing reading security-and-privacy">
+<body class="employer-scope  product aps_portal EPWHG">
 <div class="modal__background hidden" id="modal-background"></div>
 <div class="modal__positioning hidden">
 <div class="modal--nav-dropdown__highlight text--subnav">
@@ -314,36 +314,229 @@ For Job Seekers
 </nav>
 </header>
 
-<!-- reading-header -->
-
-<!-- header_medium -->
-<header class="header header--medium ">
+<div class="aps-portal--header">
+<!-- header-medium -->
+<header class="header header--medium header--reading ">
 <div class="header__wrapper">
 <div class="container">
-<snippet id="reading--header"><span><!--{cke_protected}{C}%3C!%2D%2D%20header-medium%20%2D%2D%3E--> </span><span><!--{cke_protected}{C}%3C!%2D%2D%20header__subnav%20%2D%2D%3E--> </span><div class="header--reading__subnav"><br></div> <span> <!--{cke_protected}{C}%3C!%2D%2D%20header__headline%20%2D%2D%3E--> </span><h1 class="header__headline text--headline text--white header--reading__headline"><span>Security, Privacy and Fraud</span></h1> <span> </span></snippet>
-</div> <span> </span>
+<snippet id="reading--header"><!-- header__headline -->
+<h1 class="header__headline text--headline text--white header--reading__headline">
+Wyndham Posting Portal
+</h1>
+</snippet>
 </div>
-
+</div>
 </header>
 
-<div class="container reading-wrapper">
-<div class="reading-content-box">
-<snippet id="reading--body"><div class="container text--body"><div class="reading">
-<br><section><span><!--{cke_protected}{C}%3C!%2D%2D%20%2F%20product%20list%20%2D%2D%3E--> </span><section class="product-detail box--divider-bottom" id="products"><h2 class="product-detail__headline text--headline-2">Policies</h2>
-<div class="product-detail__body"><div class="text--link-list"><ul>
-<li class="alpha">
-<div class="text--link-list__arrow product-detail__arrow"><span><a data-cke-saved-href="https://hiring.careerbuilder.com/company/privacy-policy" href="https://hiring.careerbuilder.com/company/privacy-policy" target="_blank">&gt;</a></span></div>
-<h3 style="text--headline-3 text--accent"><span><a data-cke-saved-href="https://hiring.careerbuilder.com/company/privacy-policy" href="https://hiring.careerbuilder.com/company/privacy-policy" target="_blank">Privacy</a></span></h3>
-<p>See our full Privacy Policy here.</p>
-</li>
-<li>
-<div class="text--link-list__arrow product-detail__arrow"><span><a data-cke-saved-href="https://hiring.careerbuilder.com/company/fraud" href="https://hiring.careerbuilder.com/company/fraud" target="_blank">&gt;</a></span></div>
-<h3 style="text--headline-3 text--accent"><span><a data-cke-saved-href="https://hiring.careerbuilder.com/company/fraud" href="https://hiring.careerbuilder.com/company/fraud" target="_blank">Fraud</a></span></h3>
-<p>Find out more about how to protect your business<a data-cke-saved-href="http://www.careerbuilderforemployers.com/content/fraud" href="http://www.careerbuilderforemployers.com/content/fraud" pardotclicktrack="true" target="_blank"><span style="color: rgb(51, 51, 51); line-height: 1.5; font-weight: 400;">against fraud.</span></a></p>
-</li>
-</ul></div></div></section></section>
-</div></div></snippet>
 </div>
+<div class="container aps-portal--wrapper">
+<snippet id="aps-portal--headline"><section class="reading-base__section">
+<h2>
+Welcome
+</h2>
+</section>
+</snippet><div class="columns-9 aps-header--copy">
+<snippet id="aps-portal--body"><input class="aps-copy-header--toggle" id="read-check" type="checkbox">
+<p>
+CareerBuilder is at the forefront of innovation in the recruitment space. Wyndham Hotel Group has partnered with CareerBuilder to provide discounted deals to support your recruiting efforts.
+</p>
+<p class="aps-copy-header--hidden">
+Leveraging their global presence, CareerBuilder has made it their business to help job seekers and employers around the world connect anytime, anywhere. By utilizing this site you can post positions at a discounted rate, become connected to a wider variety of applicants, and better attract top talent.
+</p>
+<label class="read-more-trigger" for="read-check"></label>
+</snippet>
+</div>
+<div class="columns-3">
+<snippet id="aps-portal-logo"><img class="aps-company--logo" src="https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-original-2776.png?1479244932">
+</snippet>
+</div>
+</div>
+<div class="aps__background-cover">
+<section class="container">
+<snippet id="aps-portal__product-tables__snippet"><p><strong><a href="https://employer.careerbuilder.com/ecommerce/global/shoppingcart.aspx?bAPSonGlobal=true&amp;lr=cbe_WHG_ep&amp;ppid=EPWHG&amp;cpbranding=true">PRODUCT TABLE WILL BE HERE.. WILL LINK TO CART   </a></strong></p>
+
+<p> </p>
+
+<p><!-- Paste Product Table <script> tag here! --></p>
+</snippet><div id="aps-portal__product-tables__component"></div>
+<div id="js-react-on-rails-context" style="display:none" data-rails-context='{"inMailer":false,"i18nLocale":"en","i18nDefaultLocale":"en","href":"https://hiring.careerbuilder.com/portal/EPWHG","location":"/portal/EPWHG","scheme":"https","host":"hiring.careerbuilder.com","port":null,"pathname":"/portal/EPWHG","search":null,"httpAcceptLanguage":null,"serverSide":false}'></div>
+<div class="js-react-on-rails-component" style="display:none" data-component-name="ProductTablesApp" data-props='{"data":[]}' data-trace="false" data-dom-id="ProductTablesApp-react-component-aa600ad5-5abb-4c5e-a738-57f76905e22c"></div>
+    <div id="ProductTablesApp-react-component-aa600ad5-5abb-4c5e-a738-57f76905e22c"><section data-reactroot="" data-reactid="1" data-react-checksum="300094142"></section></div>
+    
+
+</section>
+
+</div>
+<div class="conatiner">
+<section class="aps__faq container">
+<snippet id="aps--faq"><h2>FAQs</h2>
+</snippet><button class="accordion">
+Can I purchase more than one item at a time?
+</button>
+<div class="faq__panel">
+<p>Yes. Once you have added a product to your cart you can update the quantity of that item using the pull down menu or navigate back to the main Portals page by selecting "Back to Portal Home". Maximum quantities of products are based on the agreement between CareerBuilder and the party that negotiated these rates. Please contact your sales representative to discuss additional products or packages.</p>
+</div>
+<button class="accordion">How do I pay for my purchase? </button>
+<div class="faq__panel">
+<p>All transactions on this site are by paid for at the time of purchase by credit card (Visa, MasterCard or American Express).</p>
+</div>
+<button class="accordion">How do I use my products after the purchase is complete? </button>
+<div class="faq__panel">
+<p>Once the purchase is complete, you will be taken to your CareerBuilder account, which is where you can use your products. Jobs can be posted right away and will show up on the site within 24 hours of posting. After purchasing Resume Database access, please allow up to 2 hours for the transaction to be approved by our security team. Any orders submitted outside of normal business hours may not be processed until the following business day. Normal business hours are Monday-Friday 8:30 AM to 8:30 PM Eastern.</p>
+</div>
+<button class="accordion">What options can I give candidates to apply to my jobs?</button>
+<div class="faq__panel">
+<p>CareerBuilder has a variety of application options available. During the posting process, you will indicate whether you want candidates to apply in person, via fax, online (received by you via email), or through your own website or Applicant Tracking System.</p>
+</div>
+<button class="accordion">How do I get a receipt from my purchase?</button>
+<div class="faq__panel">
+<p>
+You will automatically receive an email containing a PDF of your paid invoice within 2 hours of your purchase. If you do not see the paid invoice in your inbox within 2 hours, please check you junk mail folder. If you are unable to locate the email in your inbox or junk mail folder, please contact our Customer Service Department at
+<a href="tel:+1-800-891-8880">
+1-800-891-8880.
+</a>
+</p>
+</div>
+<button class="accordion">What if I need additional assistance?</button>
+<div class="faq__panel">
+<p>
+If you need additional assistance with making a purchase or utilizing our products, you have several resources available to you. First, you can contact your Sales Rep for sales related inquiries or your Client Support Specialist for technical difficulties or training needs. Our toll free Customer Service line -
+<a href="tel:+1-800-891-8880">
+1-800-891-8880 -
+</a>
+is also open from 8:30 AM to 8:30 PM Monday-Friday. If you would prefer a self-service option or you need help outside normal business hours, you can reference the Help section of the employer side of our website by clicking 
+<a href="https://hiring.careerbuilder.com/">
+here.
+</a>
+</p>
+</div>
+</section>
+
+</div>
+<div class="aps__background-cover">
+<section class="aps__resources container">
+<h2 class="aps_resources__headline">
+<snippet id="aps_resources__header">Resources
+</snippet>
+</h2>
+<nav class="resource__carousel__arrows">
+<div class="resource__carousel__arrow--left fa fa-chevron-left"></div>
+<div class="resource__carousel__arrow--right fa fa-chevron-right"></div>
+</nav>
+<div class="resource-grid aps__resources_carousel" id="resource-grid">
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/careerbuilder-year-in-review" target="_blank">
+<div class="resource-block__image-wrap">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4OTRiNTEwYjUzNDMuanBnJnZlcnNpb249MDAwMCZzaWc9ZmU4YzFmYmU0NDc2ZTIyZmY3ZTc2ZTU1M2Q4YzUwMzI%25253D&amp;size=3&amp;version=1486159012&amp;sig=7de99f8cf3dff4bd7e7c1500c700cfea&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=https%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4otrintewyjuzndmuanbnjnzlcnnpb249mdawmczzawc9zmu4yzfmymu0ndc2ztiyzmy3ztc2ztu1m2q4yzuwmzi%25253d&amp;size=3&amp;version=1486159012&amp;sig=7de99f8cf3dff4bd7e7c1500c700cfea&amp;default=hubs%2ftilebg blogs">
+</div>
+<div class="resource-block__text-wrap">
+<h3 class="resource-block__headline">
+CareerBuilder 2016 Year in Review: Product Updates, Enhancements and Acquisitions
+</h3>
+<p class="resource-block__text">
+<span class="resources__continue-link">Continue reading...</span>
+</p>
+</div>
+</a>
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/workforce-aging-quickly" target="_blank">
+<div class="resource-block__image-wrap">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fthehiringsite.careerbuilder.com%2Fwp-content%2Fuploads%2F2017%2F02%2FEmsi-Which-Cities-are-Growing-THS-667x668.jpg&amp;size=3&amp;version=1486131312&amp;sig=f3c3ac226e0f859348e7f43bfbfaa429&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fthehiringsite.careerbuilder.com%2fwp content%2fuploads%2f2017%2f02%2femsi which cities are growing ths 667x668.jpg&amp;size=3&amp;version=1486131312&amp;sig=f3c3ac226e0f859348e7f43bfbfaa429&amp;default=hubs%2ftilebg blogs">
+</div>
+<div class="resource-block__text-wrap">
+<h3 class="resource-block__headline">
+The Workforce is Aging – In Some Places More Quickly Than Others
+</h3>
+<p class="resource-block__text">
+<span class="resources__continue-link">Continue reading...</span>
+</p>
+</div>
+</a>
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/how-to-find-the-right-background-check-provider" target="_blank">
+<div class="resource-block__image-wrap">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4N2QxY2RlYWE3ZDIucG5nJnZlcnNpb249MDAwMCZzaWc9NTNjNzdjZGY1ZGE2ZTYzZmUzMTk4OTdkMGJmNzEyNTc%25253D&amp;size=3&amp;version=1485297006&amp;sig=cc111a5de293eabef8aca44dba3b4c27&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4n2qxy2rlywe3zdiucg5njnzlcnnpb249mdawmczzawc9ntnjnzdjzgy1zge2ztyzzmuzmtk4otdkmgjmnzeyntc%25253d&amp;size=3&amp;version=1485297006&amp;sig=cc111a5de293eabef8aca44dba3b4c27&amp;default=hubs%2ftilebg blogs">
+</div>
+<div class="resource-block__text-wrap">
+<h3 class="resource-block__headline">
+How to Find the Right Background Check Provider
+</h3>
+<p class="resource-block__text">
+<span class="resources__continue-link">Continue reading...</span>
+</p>
+</div>
+</a>
+<a class="resource__box resource-block" href="http://resources.careerbuilder.com/hiring-dot-home/semantic-search-technology" target="_blank">
+<div class="resource-block__image-wrap">
+<img class="resource-block__image content" src="https://uberflip.cdntwrk.com/mediaproxy?url=http%3A%2F%2Fuberflip.cdntwrk.com%2Ffiles%2FaHViPTYyODY5JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzU4NzU0Y2NlOGNhZWUuanBnJnZlcnNpb249MDAwMCZzaWc9MTliZmEzYTMzMDBmNzFlYjJjZjZlOTA4ZWQwNmI2MDE%25253D&amp;size=3&amp;version=1486494771&amp;sig=5a04c91434fbb7f46a4238190ea28026&amp;default=hubs%2Ftilebg-blogs.jpg" alt="Mediaproxy?url=http%3a%2f%2fuberflip.cdntwrk.com%2ffiles%2fahviptyyody5jmntzd1pdgvtzwrpdg9yaw1hz2umzmlszw5hbwu9axrlbwvkaxrvcmltywdlxzu4nzu0y2nlognhzwuuanbnjnzlcnnpb249mdawmczzawc9mtlizmezytmzmdbmnzflyjjjzjzlota4zwqwnmi2mde%25253d&amp;size=3&amp;version=1486494771&amp;sig=5a04c91434fbb7f46a4238190ea28026&amp;default=hubs%2ftilebg blogs">
+</div>
+<div class="resource-block__text-wrap">
+<h3 class="resource-block__headline">
+Resume Database Now Enhanced with Semantic Search Technology 
+</h3>
+<p class="resource-block__text">
+<span class="resources__continue-link">Continue reading...</span>
+</p>
+</div>
+</a>
+</div>
+</section>
+
+<section class="aps-support_footer container">
+<h2 class="aps-support_header">
+<snippet id="aps-support_footer__header">Your Support Team
+</snippet>
+</h2>
+<ul class="aps-support_footer_list">
+<snippet id="aps-support_footer_list"><li class="aps-support_team_member">
+<b class="support_team_member">
+Stacey Guarneri,
+</b>
+Wyndham Portal Support
+|
+<a href="tel:+1-732-757-0901">
+1-732-757-0901
+</a>
+|
+<a href="mailto:stacey.guarneri@careerbuilder.com">
+Stacey.Guarneri@careerbuilder.com
+</a>
+</li>
+<li class="aps-support_team_member">
+<b class="support_team_member">
+Basil Murray,
+</b>
+National Account Executive
+|
+<a href="tel:+1-732-757-0917">
+1-732-757-0917
+</a>
+|
+<a href="mailto:basil.murray@careerbuilder.com">
+Basil.Murray@careerbuilder.com
+</a>
+</li>
+<li class="aps-support_team_member">
+<b class="support_team_member">
+Scott Wilson,
+</b>
+Area Sales Manager
+|
+<a href="tel:+1-732-906-8369">
+1-732-757-0901
+</a>
+|
+<a href="mailto:scott.wilson@careerbuilder.com">
+Scott.Wilson@careerbuilder.com
+</a>
+</li>
+</snippet>
+</ul>
+</section>
+<div class="container">
+<div class="columns-12">
+<snippet id="aps-support_footer_image"><img class="aps-image_footer" src="https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-original-2782.jpg?1479311515">
+</snippet>
+</div>
+</div>
+
 </div>
 
 <!-- global footer -->

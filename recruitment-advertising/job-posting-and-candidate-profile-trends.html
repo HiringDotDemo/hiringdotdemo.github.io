@@ -15,7 +15,7 @@
 <script src="//cdn.dynamicyield.com/api/8767499/api_static.js" type="text/javascript"></script>
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta charset="utf-8">
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtJRA4ATFIWHEVLXV5QSg==","queueTime":0,"applicationTime":40,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"43fcf3cdaf","applicationID":"8277762","transactionName":"IgtXRRBcXVVdQhtJRA4ATFIWHEVLXV5QSg==","queueTime":0,"applicationTime":48,"agent":""}</script>
 <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
 <!-- Responsive/Mobile Content Controls -->
 <meta content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0" name="viewport">
@@ -27,12 +27,12 @@
 <meta content="CareerBuilder Job Posting and Candidate Profile Trends | CareerBuilder for Employers" property="og:title">
 <meta content="See how your job posting will perform before you post. Review job applications and candidate profiles by volume." property="og:description">
 <meta content="CareerBuilder for Employers" property="og:site_name">
-<meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-fb-9169b970258d64c0200bc26474f89ba088ffd0a660f44778fd42f7149e2c4dba.png" property="og:image">
+<meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-fb-343746de63630b09e751bfce7e8eea8d0f8964ffd1939a9bb7203fbde7ac2388.png" property="og:image">
 <meta content="600" property="og:image:width">
 <meta content="315" property="og:image:height">
 <meta content="summary" name="twitter:card">
 <meta content="@cbforemployers" name="twitter:site">
-<meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-tw-9f5fe0a099b753ebb22a5954777547891a994bd085763701c05ef22fd02de5e0.png" name="twitter:image">
+<meta content="https://d30c0uivkwifa5.cloudfront.net/assets/logo--cb--color-tw-289a96011e331add103a5fde29314473bfabade6e44db36f51efa700e0ffa073.png" name="twitter:image">
 <meta content="CareerBuilder logomark" name="twitter:image:alt">
 <meta content="4VVGz5NZohp3_6vBXlv5_Z2lQTMz6XdevQ_NVEV5Ke8" name="google-site-verification">
 <title>CareerBuilder Job Posting and Candidate Profile Trends | CareerBuilder for Employers</title>
@@ -69,12 +69,12 @@
 
 <link href="https://hiring.careerbuilder.com/recruitment-advertising/job-posting-and-candidate-profile-trends" rel="canonical">
 <link rel="shortcut icon" type="image/x-icon" href="https://d30c0uivkwifa5.cloudfront.net/assets/icons/favicon-11a54e483811b662a28fdd298546c2c1b9c4048663fe08565d795c2a44d51a2d.ico">
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-ee75a24420759ca8391620b3d67897d7c8577783836747a5df6f7461b443ae3b.css">
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/application-346d077817f4ff5b0e8aaa69c37108e95eeea94577403e4479d420dff1bd1b93.css">
 <!--[if IE 9]>
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie9-88297770eef107777a3623e3af91c010323483bee20ddd14e6ea02921ccb8c5d.css" />
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie9-43edbf7c455e15a85e58c3279c999a72435ed017a3dea4fa3054d62c3947d26e.css" />
 <![endif]-->
 <!--[if lte IE 8]>
-<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-3ef1c609d1c6166cb53ee2ab96baaa7619fe512f4d1ad41e0c7c94287fb4d530.css" />
+<link rel="stylesheet" media="screen" href="https://d30c0uivkwifa5.cloudfront.net/assets/ie8-3f9c617cfb8c3aaff2cd23939b5a005ee00193d04b42f1cb0cfc2e82c205da02.css" />
 <![endif]-->
 </head>
 <body class="employer-scope  product trends job-posting-and-candidate-profile-trends">
@@ -580,6 +580,30 @@ CareerBuilder, LLC. All rights reserved.
 window.gon={};gon.env="production";gon.first_time_popup=false;gon.careerbuilder={"environment_url_prefix":"","auth":{"client_id":"C14816ab4","authenticated":null,"initial_login":null,"user_email":null}};
 //]]>
 </script>
+<script src="//fast.wistia.com/embed/medias/mqvbqj7pw3.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+
+<script>
+  // Adroll
+  adroll_adv_id = '3IYDMPEVIZGNXGLH6FT3NR';
+  adroll_pix_id = '62IT67FDYZFHBBD54CPXHU';
+  /* OPTIONAL: provide email to improve user identification */
+  /* adroll_email = "username@example.com"; */
+  var _onload = function(){
+    if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+    if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+    var scr = document.createElement("script");
+    var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+    scr.setAttribute('async', 'true');
+    scr.type = "text/javascript";
+    scr.src = host + "/j/roundtrip.js";
+    ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+  };
+  if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+  else {window.attachEvent('onload', _onload)}
+</script>
+
+
 <script>
   if(typeof fbq === 'undefined') {
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -729,30 +753,6 @@ window.gon={};gon.env="production";gon.first_time_popup=false;gon.careerbuilder=
     liveagent.showWhenOffline('57330000000KylM', document.getElementById('liveagent_button_offline_57330000000KylM'));
   });
 </script>
-<script src="//fast.wistia.com/embed/medias/mqvbqj7pw3.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-
-
-<script>
-  // Adroll
-  adroll_adv_id = '3IYDMPEVIZGNXGLH6FT3NR';
-  adroll_pix_id = '62IT67FDYZFHBBD54CPXHU';
-  /* OPTIONAL: provide email to improve user identification */
-  /* adroll_email = "username@example.com"; */
-  var _onload = function(){
-    if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
-    if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
-    var scr = document.createElement("script");
-    var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-    scr.setAttribute('async', 'true');
-    scr.type = "text/javascript";
-    scr.src = host + "/j/roundtrip.js";
-    ((document.getElementsByTagName('head') || [null])[0] ||
-    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-  };
-  if (window.addEventListener) {window.addEventListener('load', _onload, false);}
-  else {window.attachEvent('onload', _onload)}
-</script>
-
-<script src="https://d30c0uivkwifa5.cloudfront.net/assets/application-e658ea0f34bb4bbc08c6345793cfa8aa924b38afa379d42692d4c7b8865dd746.js" data-turbolinks-eval="false"></script>
+<script src="https://d30c0uivkwifa5.cloudfront.net/assets/application-72d54452cbc5f56da0208b7c4016b6979e515350cf31dd804932c4063e0b03e4.js" data-turbolinks-eval="false"></script>
 </body>
 </html>
